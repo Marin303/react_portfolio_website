@@ -106,3 +106,21 @@ nav {
   margin-top: -4px;
   color: #ff33cc;
 }
+
+.arrow {
+  color: var(--primary-100);
+  width: 50px;
+  animation: arrow-animation 5s ease-in-out infinite;
+}
+
+@keyframes arrow-animation {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
