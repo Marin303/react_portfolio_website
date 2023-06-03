@@ -19,6 +19,8 @@ nav {
   border-bottom: 1px solid var(--primary-100);
   animation: Nav-animation 5s ease-in-out infinite;
   z-index: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .nameText h1 {
@@ -36,6 +38,28 @@ nav {
   text-shadow: 0 0 10px var(--primary-100)
 }
 
+.li-navBar {
+  list-style: none;
+  font-size: 1.6rem;
+  color: var(--primary-100);
+}
+
+.li-navBar a {
+  text-decoration: none;
+  color: var(--primary-300);
+}
+
+.ulNav {
+  width: 100vw;
+}
+
+.wrapper button {
+  background-color: transparent;
+  color: white;
+  width: 50px;
+  margin-right: 0px;
+
+}
 
 @keyframes Nav-animation {
 
@@ -50,3 +74,13 @@ nav {
     box-shadow: 0 0 8px var(--primary-100);
   }
 }
+
+
+.btn-content {
+  top: 3em;
+  right: 0;
+  position: absolute;
+  background-color: #ff33cc;
+  width: 200px;
+}
+ 
