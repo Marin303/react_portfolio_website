@@ -2,10 +2,27 @@
   --primary-100: #ff33cc;
   --primary-200: #ff72ff;
   --primary-300: #ffe1ff;
+  --scollbar-primary-color: #ff33cc96;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scollbar-primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-100);
 }
 
 .wrapper {
-  background: url("./Images/background-diagonal-lines.jpg") center / cover no-repeat;
+  background: url("./Images/night-sky-background.jpg") center / cover no-repeat;
   height: 100vh;
   margin: 0;
 }
@@ -123,4 +140,9 @@ nav {
   50% {
     transform: translateY(10px);
   }
+}
+
+.about-container {
+  height: 100vh;
+  background: url("./Images/carbon-img.jpg") center / cover no-repeat;
 }
