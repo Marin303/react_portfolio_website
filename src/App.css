@@ -35,7 +35,8 @@ nav {
 
 .nameText h2 {
   color: var(--primary-100);
-  text-shadow: 0 0 10px var(--primary-100)
+  text-shadow: 0 0 10px var(--primary-100);
+  margin-left: 3px;
 }
 
 .li-navBar {
@@ -83,4 +84,25 @@ nav {
   background-color: #ff33cc;
   width: 200px;
 }
- 
+
+.ContactContainer {
+
+  width: 200px;
+  height: 100px;
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+
+}
+
+.ContactContainer>a {
+  text-decoration: none;
+  color: var(--primary-300);
+  text-align: center;
+}
+
+.ContactContainer>a>i:hover {
+  margin-top: -4px;
+  color: #ff33cc;
+}

@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 const NavBar = () => {
+  const [visible, setVisible] = useState(false);
+  const toggleContent = () => {
+    setVisible(!visible);
+  };
   return (
     <div className="wrapper d-flex flex-column align-items-start justify-content-center">
       <nav className="bg-dark bg-gradient">
@@ -9,7 +13,7 @@ const NavBar = () => {
             \*<a href="#NameText">MARIN DEV</a>*/
           </li>
         </ul>
-        <button>
+        <button onClick={toggleContent}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -25,18 +29,32 @@ const NavBar = () => {
             />
           </svg>
         </button>
-        <div className="btn-content">
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
+        {visible && (
+          <div className="btn-content">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        )}
       </nav>
       <section className="nameText text-white align-items-center justify-content-center">
         <h1>Marin Muktić</h1>
         <h2>Frontend Developer</h2>
+        <div className="ContactContainer">
+          <a href="https://www.linkedin.com/in/marin-muktic/">
+            <i className="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+            Linkedin
+          </a>
+          <a href="https://github.com/Marin303">
+            <i className="fa fa-github fa-2x" aria-hidden="true"></i>Github
+          </a>
+          <a href="mailto:marin.muktic3@gmail.com">
+            <i className="fa fa-envelope fa-2x" aria-hidden="true"></i>Email
+          </a>
+        </div>
       </section>
     </div>
   );
