@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
 
-const Spell = () => {
+const LetterSpelling = ({ trigger }) => {
   const msgRef = useRef(null);
 
   useEffect(() => {
     const message = "Frontend Developer";
     let index = 0;
-    const interval = 150;
+    const interval = 300;
     let timeout;
 
     const showText = () => {
@@ -22,15 +22,14 @@ const Spell = () => {
     return () => {
       clearTimeout(timeout);
     };
-  }, []);
+  }, [trigger]);
 
   return (
     <div>
-      <h2 id="msg" ref={msgRef}>
-        Frontend Developer
-      </h2>
+      <h2 id="msg" ref={msgRef}>Frontend Developer</h2>
     </div>
   );
 };
 
-export default Spell;
+export default LetterSpelling;
+

@@ -1,16 +1,26 @@
 import React, { useState } from "react";
-import LetterSpelling from "../Components/LetterSpelling"
-const NavBar = () => {
+import LetterSpelling from "../Components/LetterSpelling";
+const FirstPage = () => {
   const [visible, setVisible] = useState(false);
+  const [trigger, setTrigger] = useState(false);
+
   const toggleContent = () => {
     setVisible(!visible);
+  };
+
+  const handleLetterSpellingClick = () => {
+    setTrigger((prevTrigger) => !prevTrigger);
   };
   return (
     <div className="wrapper d-flex flex-column align-items-start justify-content-center">
       <nav className="bg-dark bg-gradient">
         <ul className="ulNav d-flex justify-content-center">
           <li className="li-navBar mt-1">
-            &lt;&gt;<a href="#NameText">MARIN DEV</a>&lt;/&gt;
+            &lt;&gt;
+            <a href="/" onClick={handleLetterSpellingClick}>
+              MARIN DEV
+            </a>
+            &lt;/&gt;
           </li>
         </ul>
         <button onClick={toggleContent}>
@@ -42,7 +52,7 @@ const NavBar = () => {
       </nav>
       <section className="nameText text-white align-items-center justify-content-center">
         <h1>Marin Muktić</h1>
-        <LetterSpelling/>
+        <LetterSpelling trigger={trigger} />
         <div className="ContactContainer">
           <a href="https://www.linkedin.com/in/marin-muktic/">
             <i className="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
@@ -76,4 +86,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default FirstPage;
