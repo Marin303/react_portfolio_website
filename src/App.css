@@ -1,29 +1,52 @@
-:root{
-    --primary-100: #ff33cc;
-    --primary-200: #ff72ff;
-    --primary-300: #ffe1ff;
+:root {
+  --primary-100: #ff33cc;
+  --primary-200: #ff72ff;
+  --primary-300: #ffe1ff;
 }
-/* body{
-  background-color: black;
-} */
-nav{
+
+.wrapper {
+  background: url("./Images/background-diagonal-lines.jpg") center / cover no-repeat;
+  height: 100vh;
+  margin: 0;
+}
+
+nav {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 3em;
   border-bottom: 1px solid var(--primary-100);
   animation: Nav-animation 5s ease-in-out infinite;
+  z-index: 1;
+}
+
+.nameText h1 {
+  font-size: 3.5rem;
+  text-shadow: 1px 2px 1px var(--primary-300), -1px -2px 1px var(--primary-100);
+  margin: 0;
+}
+
+.nameText {
+  margin-left: 12px;
+}
+
+.nameText h2 {
+  color: var(--primary-100);
+  text-shadow: 0 0 10px var(--primary-100)
 }
 
 
 @keyframes Nav-animation {
-  0%, 50%, 100% {
+
+  0%,
+  50%,
+  100% {
     box-shadow: 0 0 5px var(--primary-100);
   }
-  25%, 75% {
+
+  25%,
+  75% {
     box-shadow: 0 0 8px var(--primary-100);
   }
-}
-.containerNav{
-background:url("./Images/background-diagonal-lines.jpg") center /cover no-repeat;
-height: 100vh;
 }
