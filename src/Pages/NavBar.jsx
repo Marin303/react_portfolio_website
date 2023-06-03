@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import LetterSpelling from "../Components/LetterSpelling"
 const NavBar = () => {
   const [visible, setVisible] = useState(false);
   const toggleContent = () => {
@@ -10,7 +10,7 @@ const NavBar = () => {
       <nav className="bg-dark bg-gradient">
         <ul className="ulNav d-flex justify-content-center">
           <li className="li-navBar mt-1">
-            \*<a href="#NameText">MARIN DEV</a>*/
+            &lt;&gt;<a href="#NameText">MARIN DEV</a>&lt;/&gt;
           </li>
         </ul>
         <button onClick={toggleContent}>
@@ -42,7 +42,7 @@ const NavBar = () => {
       </nav>
       <section className="nameText text-white align-items-center justify-content-center">
         <h1>Marin Muktić</h1>
-        <h2>Frontend Developer</h2>
+        <LetterSpelling/>
         <div className="ContactContainer">
           <a href="https://www.linkedin.com/in/marin-muktic/">
             <i className="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
