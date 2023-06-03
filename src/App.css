@@ -1,3 +1,6 @@
+.App{
+  background-color: black;
+}
 :root {
   --primary-100: #ff33cc;
   --primary-200: #ff72ff;
@@ -145,4 +148,10 @@ nav {
 .about-container {
   height: 100vh;
   background: url("./Images/carbon-img.jpg") center / cover no-repeat;
+}
+
+@media screen and (max-width: 750px) {
+  .nameText h1 {
+    font-size: 2.5rem;
+  }
 }
