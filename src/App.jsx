@@ -1,9 +1,13 @@
 import "./App.css";
-import FirstPage from "./Pages/FirstPage";
+import NavBar from "./Pages/NavBar";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 function App() {
   return (
     <div className="App">
-      <FirstPage />
+      <NavBar>
+        
+      </NavBar>
     </div>
   );
 }
