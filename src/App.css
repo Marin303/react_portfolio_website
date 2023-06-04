@@ -9,6 +9,7 @@
   --scollbar-primary-color: #ff33cc96;
   --glitch-color: #00f3ff9a;
   --input-outline-color: #333333;
+  --hover-color: #e5e5e5;
 }
 
 body::-webkit-scrollbar {
@@ -289,7 +290,7 @@ h2 {
 }
 
 .contact-container:hover {
-  border: 1px solid var(--primary-100) !important;
+  border: 1px solid var(--hover-color) !important;
   outline: none;
 }
 
@@ -317,7 +318,6 @@ textarea {
 
 input {
   border: 1px solid var(--input-outline-color);
-  border-radius: 5px;
 }
 
 input,
@@ -325,11 +325,12 @@ textarea {
   color: white;
   width: 100%;
   background-color: transparent;
+  border-radius: 5px;
 }
 
 input:hover,
 textarea:hover {
-  border: 1px solid var(--primary-200);
+  border: 1px solid var(--hover-color);
 }
 
 input:focus,
@@ -349,4 +350,21 @@ textarea:focus {
 .send:active {
   background-color: var(--primary-100);
   color: black;
+}
+
+p {
+  color: white;
+}
+
+fieldset>a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: var(--primary-300);
+}
+
+.credits{
+  border-top: 1px solid var(--primary-100);
+  height: 10vh;
+  color: white;
+  text-align: center;
 }
