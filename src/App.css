@@ -163,6 +163,8 @@ h2 {
 .about-container {
   height: 100vh;
   background: url("./Images/carbon-img.jpg") center / cover no-repeat;
+  border-top:1px solid var(--primary-200) ;
+  border-bottom: 1px solid var(--primary-200);
 }
 
 @media screen and (max-width: 750px) {
@@ -188,7 +190,7 @@ h2 {
 .about-wrapper {
   border: 3px solid var(--primary-100);
   border-radius: 10px;
-  width: 50%;
+  max-width: 80%;
   height: auto;
   margin: 30px auto;
   background-color: black;
@@ -246,4 +248,20 @@ h2 {
   100% {
     text-shadow: 4px -1px 1px var(--glitch-color), -4px -1px 1px var(--scollbar-primary-color);
   }
+}
+
+/*Featured Projects*/
+
+.featuredContainer{
+  height: 100vh;
+  background-color: #252323;
+  text-align: center;
+}
+
+.projects{
+  width: 300px;
+  height: auto;
+  border: 1px solid var(--primary-100);
+  border-radius: 10px;
+  margin: 50px auto;
 }
