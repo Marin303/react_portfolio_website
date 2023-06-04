@@ -8,6 +8,8 @@
   --primary-300: #ffe1ff;
   --scollbar-primary-color: #ff33cc96;
   --glitch-color: #00f3ff9a;
+  --input-outline-color: #333333;
+  --hover-color: #e5e5e5;
 }
 
 body::-webkit-scrollbar {
@@ -163,6 +165,8 @@ h2 {
 .about-container {
   height: 100vh;
   background: url("./Images/carbon-img.jpg") center / cover no-repeat;
+  border-top: 1px solid var(--primary-200);
+  border-bottom: 1px solid var(--primary-200);
 }
 
 @media screen and (max-width: 750px) {
@@ -188,7 +192,7 @@ h2 {
 .about-wrapper {
   border: 3px solid var(--primary-100);
   border-radius: 10px;
-  width: 50%;
+  max-width: 80%;
   height: auto;
   margin: 30px auto;
   background-color: black;
@@ -246,4 +250,121 @@ h2 {
   100% {
     text-shadow: 4px -1px 1px var(--glitch-color), -4px -1px 1px var(--scollbar-primary-color);
   }
+}
+
+/*Featured Projects*/
+
+.featuredContainer {
+  height: auto;
+  background-color: #252323;
+  text-align: center;
+}
+
+.projects {
+  max-width: 300px;
+  height: auto;
+  border: 1px solid var(--primary-100);
+  border-radius: 10px;
+  margin: 50px auto;
+  display: inline-block;
+}
+
+.custom {
+  margin-left: 10px;
+}
+
+/*Footer*/
+.footer {
+  border-top: 1px solid var(--primary-100);
+  height: auto;
+  background: url("./Images/world-img2.jpg") center / cover no-repeat;
+}
+
+.contact-container {
+  display: inline-block;
+  margin: 50px 20px;
+  width: 60%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact-container:hover {
+  border: 1px solid var(--hover-color) !important;
+  outline: none;
+}
+
+fieldset {
+  max-width: 600px;
+  border: 1px solid var(--input-outline-color) !important;
+}
+
+legend {
+  width: auto !important;
+  color: white;
+  float: none !important;
+  margin-left: 20px !important;
+}
+
+label {
+  display: block;
+  width: 100%;
+  color: white;
+}
+
+textarea {
+  max-height: 30%;
+}
+
+input {
+  border: 1px solid var(--input-outline-color);
+}
+
+input,
+textarea {
+  color: white;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+input:hover,
+textarea:hover {
+  border: 1px solid var(--hover-color);
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid var(--primary-100);
+  outline: none;
+}
+
+/*send button*/
+.send {
+  width: 100%;
+  background-color: var(--primary-200);
+  color: white;
+  border-radius: 10px;
+}
+
+.send:active {
+  background-color: var(--primary-100);
+  color: black;
+}
+
+p {
+  color: white;
+}
+
+fieldset>a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: var(--primary-300);
+}
+
+.credits{
+  border-top: 1px solid var(--primary-100);
+  height: 10vh;
+  color: white;
+  text-align: center;
 }

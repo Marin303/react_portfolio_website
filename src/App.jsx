@@ -1,12 +1,16 @@
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import FirstPage from "./Pages/FirstPage";
 import AboutMe from "./Pages/AboutMe";
-import "bootstrap/dist/css/bootstrap.min.css";
+import FeaturedProjects from "./Pages/FeaturedProjects";
+import Footer from "./Pages/Footer";
 function App() {
   return (
     <div className="App">
       <FirstPage />
       <AboutMe/>
+      <FeaturedProjects/>
+      <Footer/>
     </div>
   );
 }
