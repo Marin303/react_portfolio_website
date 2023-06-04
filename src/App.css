@@ -163,7 +163,7 @@ h2 {
 .about-container {
   height: 100vh;
   background: url("./Images/carbon-img.jpg") center / cover no-repeat;
-  border-top:1px solid var(--primary-200) ;
+  border-top: 1px solid var(--primary-200);
   border-bottom: 1px solid var(--primary-200);
 }
 
@@ -252,16 +252,21 @@ h2 {
 
 /*Featured Projects*/
 
-.featuredContainer{
+.featuredContainer {
   height: 100vh;
   background-color: #252323;
   text-align: center;
 }
 
-.projects{
-  width: 300px;
+.projects {
+  max-width: 300px;
   height: auto;
   border: 1px solid var(--primary-100);
   border-radius: 10px;
   margin: 50px auto;
+  display: inline-block;
+}
+
+.custom {
+  margin-left: 10px;
 }
