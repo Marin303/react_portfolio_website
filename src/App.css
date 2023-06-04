@@ -1,38 +1,249 @@
 .App {
+  background-color: black;
+}
+
+:root {
+  --primary-100: #ff33cc;
+  --primary-200: #ff72ff;
+  --primary-300: #ffe1ff;
+  --scollbar-primary-color: #ff33cc96;
+  --glitch-color: #00f3ff9a;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scollbar-primary-color);
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-100);
+}
+
+::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-bottom: 10px;
+}
+
+::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-top: 10px;
+}
+
+.wrapper {
+  background: url("./Images/night-sky-background.jpg") center / cover no-repeat;
+  height: 100vh;
+  margin: 0;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3em;
+  border-bottom: 1px solid var(--primary-100);
+  animation: Nav-animation 5s ease-in-out infinite;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nameText h1 {
+  font-size: 3.5rem;
+  text-shadow: 1px 2px 1px var(--primary-300), -1px -2px 1px var(--primary-100);
+  margin: 0;
+}
+
+.nameText {
+  margin-left: 12px;
+}
+
+.nameText h2,
+h2 {
+  color: var(--primary-100);
+  text-shadow: 0 0 10px var(--primary-100);
+  margin-left: 3px;
+}
+
+.li-navBar {
+  list-style: none;
+  font-size: 1.6rem;
+  color: var(--primary-100);
+}
+
+.li-navBar a {
+  text-decoration: none;
+  color: var(--primary-300);
+}
+
+.ulNav {
+  width: 100vw;
+}
+
+.wrapper button {
+  background-color: transparent;
+  color: var(--primary-300);
+  width: 50px;
+  margin-right: 0px;
+
+}
+
+@keyframes Nav-animation {
+
+  0%,
+  50%,
+  100% {
+    box-shadow: 0 0 5px var(--primary-100);
+  }
+
+  25%,
+  75% {
+    box-shadow: 0 0 8px var(--primary-100);
+  }
+}
+
+
+.btn-content {
+  top: 3em;
+  right: 0;
+  position: absolute;
+  background-color: var(--primary-200);
+  width: 200px;
+}
+
+.ContactContainer {
+
+  width: 200px;
+  height: 100px;
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+
+}
+
+.ContactContainer>a {
+  text-decoration: none;
+  color: var(--primary-300);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ContactContainer>a>i:hover {
+  transform: translateY(-4px);
+  color: var(--primary-100);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.arrow {
+  color: var(--primary-100);
+  width: 50px;
+  animation: arrow-animation 5s ease-in-out infinite;
+}
+
+@keyframes arrow-animation {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.about-container {
+  height: 100vh;
+  background: url("./Images/carbon-img.jpg") center / cover no-repeat;
+}
+
+@media screen and (max-width: 750px) {
+  .nameText h1 {
+    font-size: 2.5rem;
+  }
+
+  .coverImage {
+    height: 120px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .imageOfMe {
+    width: 100px;
+  }
+}
+
+.custom-border {
+  border-bottom: 1px solid var(--primary-200);
+}
+
+.about-wrapper {
+  border: 3px solid var(--primary-100);
+  border-radius: 10px;
+  width: 50%;
+  height: auto;
+  margin: 30px auto;
+  background-color: black;
+}
+
+.about-wrapper .imageOfMe {
+  border: 1px solid var(--primary-200);
+  margin-top: -50%;
+}
+
+.image-wrapper {
+  width: 120px;
+  height: 150px;
+  margin-left: 5%;
+}
+
+.textAbout {
+  text-align: left;
+  margin-top: -40px;
+  padding-left: 30px;
   color: white;
+  margin-bottom: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.textAbout h3 {
+  animation: glitch 1s infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.textAbout h4 {
+  color: var(--primary-100);
+}
+
+@keyframes glitch {
+
+  0% {
+    text-shadow: 3px 1px 1px var(--scollbar-primary-color), -4px -1px 1px #00f3ff9a;
   }
-  to {
-    transform: rotate(360deg);
+
+  20% {
+    text-shadow: 3px 1px 1px var(--glitch-color), -4px -1px 1px var(--scollbar-primary-color);
+  }
+
+  40% {
+    text-shadow: 1px 2px 1px var(--scollbar-primary-color), -1px -1px 1px var(--glitch-color);
+  }
+
+  60% {
+    text-shadow: 3px 1px 1px var(--glitch-color), -4px -1px 1px var(--scollbar-primary-color);
+  }
+
+  80% {
+    text-shadow: 1px 1px 1px var(--scollbar-primary-color), -1px -1px 1px var(--glitch-color);
+  }
+
+  100% {
+    text-shadow: 4px -1px 1px var(--glitch-color), -4px -1px 1px var(--scollbar-primary-color);
   }
 }
