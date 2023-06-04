@@ -253,7 +253,7 @@ h2 {
 /*Featured Projects*/
 
 .featuredContainer {
-  height: 100vh;
+  height: auto;
   background-color: #252323;
   text-align: center;
 }
@@ -269,4 +269,32 @@ h2 {
 
 .custom {
   margin-left: 10px;
+}
+
+/*Footer*/
+.footer {
+  border-top: 1px solid var(--primary-100);
+  height: auto;
+  background: url("./Images/world-img2.jpg") center / cover no-repeat;
+}
+
+.contact-container {
+  display: inline-block;
+  margin: 50px 20px;
+  border: 1px solid var(--primary-100);
+  max-width: 50%;
+  height: 500px;
+  padding: 20px;
+}
+
+fieldset {
+  max-width: 600px;
+  border: 1px solid var(--primary-100) !important;
+}
+
+legend {
+  width: auto !important;
+  color: white;
+  float: none !important;
+  margin-left: 20px !important;
 }
