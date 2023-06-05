@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="text-center">
-        <h2 className="text-white pt-5 d-inline-block custom-border mt-5">
+        <h2 className="text-white d-inline-block custom-border mt-5 mb-5">
           Contact me
         </h2>
       </div>

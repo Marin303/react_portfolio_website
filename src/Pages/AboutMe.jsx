@@ -4,8 +4,8 @@ import imageOfMe from "../Images/me-img.png";
 
 const AboutMe = () => {
   return (
-    <div className="about-container text-center align-middle">
-      <h2 className="text-white pt-5 d-inline-block custom-border mt-5">About Me</h2>
+    <div className="about-container text-center align-middle pb-5">
+      <h2 className="text-white d-inline-block custom-border mt-5">About Me</h2>
       <div className="about-wrapper ">
         <img
           src={programmingImage}

@@ -3,13 +3,13 @@ import gifChat from "../Images/chatapp2.gif";
 const FeaturedProjects = () => {
   return (
     <div className="featuredContainer">
-      <h2 className="text-white pt-5 d-inline-block custom-border mt-5">
+      <h2 className="text-white d-inline-block custom-border mt-5">
         Featured Projects
       </h2>
       <div className="content">
         <section className="projects">
           <img
-            className="rounded-top"
+            className="rounded-top-3"
             src={gifChat}
             alt="chat-gif"
             style={{ width: "100%", maxHeight: "250px" }}
@@ -19,7 +19,7 @@ const FeaturedProjects = () => {
         </section>
         <section className="projects custom">
           <img
-            className="rounded-top"
+            className="rounded-top-3"
             src="https://dummyimage.com/300x300/777777/ffffff.png"
             alt="300x300"
             style={{ width: "100%", maxHeight: "250px" }}

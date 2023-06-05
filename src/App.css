@@ -69,11 +69,11 @@ nav {
   margin-left: 12px;
 }
 
-.nameText h2,
+
 h2 {
   color: var(--primary-100);
   text-shadow: 0 0 10px var(--primary-100);
-  margin-left: 3px;
+ 
 }
 
 .li-navBar {
@@ -161,9 +161,8 @@ h2 {
     transform: translateY(10px);
   }
 }
-
+/*fixed height removed, because overflow on other divs*/
 .about-container {
-  height: 100vh;
   background: url("./Images/carbon-img.jpg") center / cover no-repeat;
   border-top: 1px solid var(--primary-200);
   border-bottom: 1px solid var(--primary-200);
@@ -193,7 +192,7 @@ h2 {
   border: 3px solid var(--primary-100);
   border-radius: 10px;
   max-width: 80%;
-  height: auto;
+ 
   margin: 30px auto;
   background-color: black;
 }
@@ -263,7 +262,7 @@ h2 {
 .projects {
   max-width: 300px;
   height: auto;
-  border: 1px solid var(--primary-100);
+  border: 2px solid var(--primary-100);
   border-radius: 10px;
   margin: 50px auto;
   display: inline-block;
@@ -276,15 +275,14 @@ h2 {
 /*Footer*/
 .footer {
   border-top: 1px solid var(--primary-100);
-  height: auto;
+  padding: 20px;
   background: url("./Images/world-img2.jpg") center / cover no-repeat;
 }
 
 .contact-container {
   display: inline-block;
-  margin: 50px 20px;
-  width: 60%;
-  max-width: 500px;
+  margin: 10px auto;
+  width: 100%;
   padding: 20px;
   border-radius: 10px;
 }
@@ -313,7 +311,7 @@ label {
 }
 
 textarea {
-  max-height: 30%;
+  height: 100% !important;
 }
 
 input {
