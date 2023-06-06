@@ -3,12 +3,23 @@ import LetterSpelling from "../Components/LetterSpelling";
 const FirstPage = () => {
   const [visible, setVisible] = useState(false);
   const [trigger, setTrigger] = useState(false);
+  const [btnVisible, setBtnVisible] = useState(true);
   const btnContentRef = useRef(null);
 
   const toggleContent = () => {
-    setVisible(!visible);
+    if (setVisible(visible)) {
+      setBtnVisible(false);
+    } else {
+      setBtnVisible(true);
+    }
   };
-
+  const closeContent = () => {
+    if (setVisible(!visible)) {
+      setBtnVisible(true);
+    } else {
+      setBtnVisible(false);
+    }
+  };
   const handleLetterSpellingClick = () => {
     setTrigger((prevTrigger) => !prevTrigger);
   };
@@ -40,21 +51,26 @@ const FirstPage = () => {
             &lt;/&gt;
           </li>
         </ul>
+        {btnVisible && (
+          <button onClick={closeContent}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-3 h-3"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        )}
         <button onClick={toggleContent}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-3 h-3"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
+          <i className="fa-solid fa-xmark fa-xl"></i>
         </button>
         {visible && (
           <div className="btn-content" ref={btnContentRef}>
