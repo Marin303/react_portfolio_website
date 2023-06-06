@@ -2,7 +2,7 @@ import React from "react";
 import gifChat from "../Images/chatapp2.gif";
 const FeaturedProjects = () => {
   return (
-    <div className="featuredContainer pb-5">
+    <div className="featuredContainer" id="projects">
       <h2 className="text-white d-inline-block custom-border mt-5">
         Featured Projects
       </h2>

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import LetterSpelling from "../Components/LetterSpelling";
 const FirstPage = () => {
   const [visible, setVisible] = useState(false);
   const [trigger, setTrigger] = useState(false);
+  const btnContentRef = useRef(null);
 
   const toggleContent = () => {
     setVisible(!visible);
@@ -11,8 +12,24 @@ const FirstPage = () => {
   const handleLetterSpellingClick = () => {
     setTrigger((prevTrigger) => !prevTrigger);
   };
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (btnContentRef.current && !btnContentRef.current.contains(e.target)) {
+        setVisible(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
-    <div className="wrapper d-flex flex-column align-items-start justify-content-center">
+    <div
+      className="wrapper d-flex flex-column align-items-start justify-content-center"
+      id="home"
+    >
       <nav className="bg-dark bg-gradient">
         <ul className="ulNav d-flex justify-content-center">
           <li className="li-navBar mt-1">
@@ -40,12 +57,20 @@ const FirstPage = () => {
           </svg>
         </button>
         {visible && (
-          <div className="btn-content">
+          <div className="btn-content" ref={btnContentRef}>
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#projects">Projects</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
             </ul>
           </div>
         )}

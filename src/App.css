@@ -166,6 +166,7 @@ h2 {
   background: url("./Images/carbon-img.jpg") center / cover no-repeat;
   border-top: 1px solid var(--primary-200);
   border-bottom: 1px solid var(--primary-200);
+  padding-top: 20px;
 }
 
 @media screen and (max-width: 750px) {
@@ -255,7 +256,7 @@ h2 {
 /*Featured Projects*/
 
 .featuredContainer {
-  height: auto;
+  padding: 20px;
   background-color: #252323;
   text-align: center;
 }
@@ -371,3 +372,5 @@ fieldset>a {
   color: white;
   text-align: center;
 }
+
+
