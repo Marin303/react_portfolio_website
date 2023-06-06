@@ -51,7 +51,7 @@ const Footer = () => {
           </fieldset>
         </fieldset>
       </div>
-      <div className="credits">
+      <div className="credits mt-5">
        <p className="mt-1 mb-0">&#169;2023 | Developed by <a href="https://github.com/Marin303">Marin Muktić</a></p> 
        <p>All rights reserved</p>
       </div>

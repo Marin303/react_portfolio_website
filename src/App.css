@@ -191,6 +191,7 @@ h2 {
 .about-wrapper {
   border: 3px solid var(--primary-100);
   border-radius: 10px;
+  width: 800px;
   max-width: 80%;
  
   margin: 30px auto;
@@ -260,16 +261,20 @@ h2 {
 }
 
 .projects {
-  max-width: 300px;
+  
   height: auto;
   border: 2px solid var(--primary-100);
   border-radius: 10px;
-  margin: 50px auto;
+  margin: 20px auto;
   display: inline-block;
 }
 
-.custom {
-  margin-left: 10px;
+.content{
+  /* margin:20px 180px 0 180px; */
+  padding: 80px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 /*Footer*/
