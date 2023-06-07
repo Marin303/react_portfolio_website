@@ -1,18 +1,50 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import LetterSpelling from "../Components/LetterSpelling";
+
 const FirstPage = () => {
-  const [visible, setVisible] = useState(false);
+  const [visibleContent, setVisibleContent] = useState(false);
+  const [toggleBtnVisible, setToggleBtnVisible] = useState(true);
+  const [closeBtnVisible, setCloseBtnVisible] = useState(false);
+  const btnContentRef = useRef(null);
   const [trigger, setTrigger] = useState(false);
 
   const toggleContent = () => {
-    setVisible(!visible);
+    setVisibleContent(true);
+    setToggleBtnVisible(false);
+    setCloseBtnVisible(true);
+  };
+
+  const btnDisappear = () => {
+    setVisibleContent(false);
+    setToggleBtnVisible(true);
+    setCloseBtnVisible(false);
   };
 
   const handleLetterSpellingClick = () => {
     setTrigger((prevTrigger) => !prevTrigger);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (btnContentRef.current && !btnContentRef.current.contains(e.target)) {
+        setVisibleContent(false);
+        setToggleBtnVisible(true);
+        setCloseBtnVisible(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="wrapper d-flex flex-column align-items-start justify-content-center">
+    <div
+      className="wrapper d-flex flex-column align-items-start justify-content-center"
+      id="home"
+    >
       <nav className="bg-dark bg-gradient">
         <ul className="ulNav d-flex justify-content-center">
           <li className="li-navBar mt-1">
@@ -23,29 +55,47 @@ const FirstPage = () => {
             &lt;/&gt;
           </li>
         </ul>
-        <button onClick={toggleContent}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-3 h-3"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-        </button>
-        {visible && (
-          <div className="btn-content">
+
+        {toggleBtnVisible && (
+          <button onClick={toggleContent}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-3 h-3"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        )}
+
+        {closeBtnVisible && (
+          <button onClick={btnDisappear}>
+            <i className="fa-solid fa-xmark fa-xl"></i>
+          </button>
+        )}
+
+        {visibleContent && (
+          <div className="btn-content" ref={btnContentRef}>
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#projects">Projects</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
             </ul>
           </div>
         )}
@@ -67,20 +117,22 @@ const FirstPage = () => {
         </div>
       </section>
       <div className="arrow position-absolute bottom-0 start-50 translate-middle">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-6 h-6 arrow"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-          />
-        </svg>
+        <a href="#about">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6 arrow"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </a>
       </div>
     </div>
   );

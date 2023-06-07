@@ -2,9 +2,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer" id="contact">
       <div className="text-center">
-        <h2 className="text-white pt-5 d-inline-block custom-border mt-5">
+        <h2 className="text-white d-inline-block custom-border mt-5 mb-5">
           Contact me
         </h2>
       </div>
@@ -46,14 +46,38 @@ const Footer = () => {
           <fieldset>
             <legend>Contact me</legend>
             <a href="mailto:marin.muktic3@gmail.com">
-              <i className="fa fa-envelope fa-2x" aria-hidden="true"></i> mmuktic3@gmail.com
+              <i className="fa fa-envelope fa-2x" aria-hidden="true"></i>{" "}
+              mmuktic3@gmail.com
             </a>
           </fieldset>
         </fieldset>
       </div>
-      <div className="credits">
-       <p className="mt-1 mb-0">&#169;2023 | Developed by <a href="https://github.com/Marin303">Marin Muktić</a></p> 
-       <p>All rights reserved</p>
+      <div className="arrow-up-container">
+        <a href="home">
+          <div className="arrow-up-wrapper arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-3 h-3"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5"
+              />
+            </svg>
+          </div>
+        </a>
+      </div>
+      <div className="credits mt-5">
+        <p className="mt-1 mb-0">
+          &#169;2023 | Developed by{" "}
+          <a href="https://github.com/Marin303">Marin Muktić</a>
+        </p>
+        <p>All rights reserved</p>
       </div>
     </div>
   );
