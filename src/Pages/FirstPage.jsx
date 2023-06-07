@@ -1,32 +1,33 @@
 import React, { useEffect, useRef, useState } from "react";
 import LetterSpelling from "../Components/LetterSpelling";
+
 const FirstPage = () => {
-  const [visible, setVisible] = useState(false);
-  const [trigger, setTrigger] = useState(false);
-  const [btnVisible, setBtnVisible] = useState(true);
+  const [visibleContent, setVisibleContent] = useState(false);
+  const [toggleBtnVisible, setToggleBtnVisible] = useState(true);
+  const [closeBtnVisible, setCloseBtnVisible] = useState(false);
   const btnContentRef = useRef(null);
+  const [trigger, setTrigger] = useState(false);
 
   const toggleContent = () => {
-    if (setVisible(visible)) {
-      setBtnVisible(false);
-    } else {
-      setBtnVisible(true);
-    }
+    setVisibleContent(true);
+    setToggleBtnVisible(false);
+    setCloseBtnVisible(true);
   };
-  const closeContent = () => {
-    if (setVisible(!visible)) {
-      setBtnVisible(true);
-    } else {
-      setBtnVisible(false);
-    }
+
+  const btnDisappear = () => {
+    setVisibleContent(false);
+    setToggleBtnVisible(true);
+    setCloseBtnVisible(false);
   };
+
   const handleLetterSpellingClick = () => {
     setTrigger((prevTrigger) => !prevTrigger);
   };
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (btnContentRef.current && !btnContentRef.current.contains(e.target)) {
-        setVisible(false);
+        setVisibleContent(false);
       }
     };
 
@@ -36,11 +37,9 @@ const FirstPage = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
   return (
-    <div
-      className="wrapper d-flex flex-column align-items-start justify-content-center"
-      id="home"
-    >
+    <div className="wrapper d-flex flex-column align-items-start justify-content-center" id="home">
       <nav className="bg-dark bg-gradient">
         <ul className="ulNav d-flex justify-content-center">
           <li className="li-navBar mt-1">
@@ -51,8 +50,9 @@ const FirstPage = () => {
             &lt;/&gt;
           </li>
         </ul>
-        {btnVisible && (
-          <button onClick={closeContent}>
+
+        {toggleBtnVisible && (
+          <button onClick={toggleContent}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -61,18 +61,18 @@ const FirstPage = () => {
               stroke="currentColor"
               className="w-3 h-3"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
           </button>
         )}
-        <button onClick={toggleContent}>
-          <i className="fa-solid fa-xmark fa-xl"></i>
-        </button>
-        {visible && (
+
+        {closeBtnVisible && (
+          <button onClick={btnDisappear}>
+            <i className="fa-solid fa-xmark fa-xl"></i>
+          </button>
+        )}
+
+        {visibleContent && (
           <div className="btn-content" ref={btnContentRef}>
             <ul>
               <li>
@@ -116,11 +116,7 @@ const FirstPage = () => {
           stroke="currentColor"
           className="w-6 h-6 arrow"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-          />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
         </svg>
       </div>
     </div>
