@@ -73,7 +73,7 @@ nav {
 h2 {
   color: var(--primary-100);
   text-shadow: 0 0 10px var(--primary-100);
- 
+
 }
 
 .li-navBar {
@@ -161,6 +161,7 @@ h2 {
     transform: translateY(10px);
   }
 }
+
 /*fixed height removed, because overflow on other divs*/
 .about-container {
   background: url("./Images/carbon-img.jpg") center / cover no-repeat;
@@ -194,7 +195,7 @@ h2 {
   border-radius: 10px;
   width: 800px;
   max-width: 80%;
- 
+
   margin: 30px auto;
   background-color: black;
 }
@@ -262,7 +263,7 @@ h2 {
 }
 
 .projects {
-  
+
   height: auto;
   border: 2px solid var(--primary-100);
   border-radius: 10px;
@@ -270,7 +271,7 @@ h2 {
   display: inline-block;
 }
 
-.content{
+.content {
   /* margin:20px 180px 0 180px; */
   padding: 80px;
   display: flex;
@@ -366,11 +367,24 @@ fieldset>a {
   color: var(--primary-300);
 }
 
-.credits{
+.credits {
   border-top: 1px solid var(--primary-100);
   height: 10vh;
   color: white;
   text-align: center;
 }
 
+.arrow-up-wrapper {
+  width: 50px;
+  border: 1px solid var(--input-outline-color);
+  border-radius: 10px;
+}
 
+.arrow-up-wrapper:hover {
+  border: 1px solid var(--primary-300);
+}
+
+.arrow-up-container {
+  display: flex;
+  justify-content: flex-end;
+}
