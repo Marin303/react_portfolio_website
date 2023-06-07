@@ -17,7 +17,7 @@ const FeaturedProjects = () => {
           <h2 className="text-white">Web Chat App</h2>
           <p className="text-white">Chat created with React</p>
         </section>
-        <section className="projects">
+        <section className="projects pb-5">
           <img
             className="rounded-top-3"
             src="https://dummyimage.com/300x300/777777/ffffff.png"
