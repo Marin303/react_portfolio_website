@@ -119,17 +119,18 @@ nav {
   height: 70vh;
   position: absolute;
   border: 1px solid var(--hover-color);
-  border-radius: 10px;
+  border-top: 0px;
+  border-radius: 0 0 10px 10px;
   width: 200px;
   padding: 10px;
   text-align: center;
   line-height: 5vh;
-  background-color: var(--glitch-color);
+  /* background-color: black; */
 }
 
 .btn-content a{
   display: block;
-  border-radius: 10px;
+  border-radius: 0 10px 0;
   color: white;
   background-color: var(--primary-100);
   text-decoration: none;
@@ -290,14 +291,12 @@ nav {
 }
 
 .projects {
-
   height: auto;
   border: 2px solid var(--primary-100);
   border-radius: 10px;
   margin: 20px auto;
   display: inline-block;
 }
-
 .content {
   /* margin:20px 180px 0 180px; */
   padding: 80px;

@@ -53,7 +53,7 @@ const Footer = () => {
         </fieldset>
       </div>
       <div className="arrow-up-container">
-        <a href="home">
+        <a href="#home">
           <div className="arrow-up-wrapper arrow">
             <svg
               xmlns="http://www.w3.org/2000/svg"
