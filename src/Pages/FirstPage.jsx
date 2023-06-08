@@ -82,7 +82,7 @@ const FirstPage = () => {
         )}
 
         {visibleContent && (
-          <div className="btn-content" ref={btnContentRef}>
+          <div className="btn-content bg-dark bg-gradient" ref={btnContentRef}>
             <ul>
               <li>
                 <a href="#home">Home</a>
