@@ -150,7 +150,9 @@ nav {
   width: 100px; 
   margin: 20px auto;
 }
-
+.btn-content i{
+  margin-right: 5px;
+}
 
 .ContactContainer {
   width: 200px;
