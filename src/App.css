@@ -116,7 +116,7 @@ nav {
 .btn-content {
   top: 3em;
   right: 0;
-  height: 70vh;
+  height: 50vh;
   position: absolute;
   border: 1px solid var(--hover-color);
   border-top: 0px;
