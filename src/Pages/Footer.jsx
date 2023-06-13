@@ -48,10 +48,10 @@ const Footer = () => {
             <label htmlFor="subject">Subject:</label>
             <input type="text" id="subject" name="subject" required />
 
-            <label htmlFor="text">Text:</label>
+            <label htmlFor="message">Text:</label>
             <textarea
-              name="text"
-              id="text"
+              name="message"
+              id="message"
               cols="30"
               rows="10"
               required
