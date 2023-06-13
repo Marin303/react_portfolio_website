@@ -1,6 +1,27 @@
 import React from "react";
-
+import emailjs from "@emailjs/browser";
 const Footer = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_USER_ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    e.target.reset();
+  };
   return (
     <div className="footer" id="contact">
       <div className="text-center">
@@ -11,7 +32,7 @@ const Footer = () => {
       <div className="d-flex justify-content-center flex-wrap">
         <fieldset className="contact-container">
           <legend>Contact via Email</legend>
-          <form action="mailto:mmuktic3@gmail.com" method="get">
+          <form action="" onSubmit={sendEmail}>
             <label htmlFor="name">Name:</label>
             <input type="text" id="name" name="name" required />
 
@@ -27,10 +48,10 @@ const Footer = () => {
             <label htmlFor="subject">Subject:</label>
             <input type="text" id="subject" name="subject" required />
 
-            <label htmlFor="text">Text:</label>
+            <label htmlFor="message">Text:</label>
             <textarea
-              name="text"
-              id="text"
+              name="message"
+              id="message"
               cols="30"
               rows="10"
               required
