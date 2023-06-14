@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 const Footer = () => {
+  const [checkSend, setCheckSend] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -14,6 +15,11 @@ const Footer = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setCheckSend(true);
+
+          setTimeout(() => {
+            setCheckSend(false);
+          }, 5000);
         },
         (error) => {
           console.log(error.text);
@@ -22,6 +28,7 @@ const Footer = () => {
 
     e.target.reset();
   };
+
   return (
     <div className="footer" id="contact">
       <div className="text-center">
@@ -56,6 +63,9 @@ const Footer = () => {
               rows="10"
               required
             ></textarea>
+            {checkSend && (
+              <div className="success-message">Email sent successfully!</div>
+            )}
             <button className="d-block send" type="submit">
               Send
             </button>
