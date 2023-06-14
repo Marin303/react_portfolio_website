@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 const Footer = () => {
   const [checkSend, setCheckSend] = useState(false);
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      sendEmail(e);
+    }
+  }
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -66,7 +71,7 @@ const Footer = () => {
             {checkSend && (
               <div className="success-message">Email sent successfully!</div>
             )}
-            <button className="d-block send" type="submit">
+            <button className="d-block send" type="submit" onSubmit={handleKeyDown}>
               Send
             </button>
           </form>
