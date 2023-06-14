@@ -69,7 +69,8 @@ nav {
   margin-left: 12px;
 }
 
-.nameText h2, h2{
+.nameText h2,
+h2 {
   color: var(--primary-100);
   text-shadow: 0 0 10px var(--primary-100);
 
@@ -128,29 +129,34 @@ nav {
   /* background-color: black; */
 }
 
-.btn-content a{
+.btn-content a {
   display: block;
   border-radius: 0 10px 0;
   color: white;
   background-color: var(--primary-100);
   text-decoration: none;
 }
-.btn-content a:hover{
-  color:blue;
+
+.btn-content a:hover {
+  color: blue;
 }
-.btn-content a:active{
+
+.btn-content a:active {
   color: white;
   background-color: blue;
 }
-.btn-content ul{
+
+.btn-content ul {
   padding: 0;
   list-style: none;
 }
+
 .btn-content li {
-  width: 100px; 
+  width: 100px;
   margin: 20px auto;
 }
-.btn-content i{
+
+.btn-content i {
   margin-right: 5px;
 }
 
@@ -299,6 +305,7 @@ nav {
   margin: 20px auto;
   display: inline-block;
 }
+
 .content {
   /* margin:20px 180px 0 180px; */
   padding: 80px;
@@ -424,4 +431,26 @@ fieldset>a {
   margin: 10px;
   text-align: center;
   border-radius: 5px;
+}
+
+/* featured projects*/
+.link-project {
+  border: 1px solid var(--primary-100);
+  width: fit-content;
+  padding: 5px;
+  font-size: 12px;
+  margin: 0 auto 5px;
+}
+
+.link-project a {
+  text-decoration: none;
+  color: white;
+}
+
+.link-project:hover {
+  background-color: var(--primary-100);
+}
+
+.link-project:hover a {
+  color: black;
 }

@@ -16,6 +16,15 @@ const FeaturedProjects = () => {
           />
           <h2 className="text-white">Web Chat App</h2>
           <p className="text-white">Chat created with React</p>
+          <div className="link-project rounded-3">
+            <a
+              href="https://github.com/Marin303/react_webchat_scaledrone"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub - repository
+            </a>
+          </div>
         </section>
         <section className="projects pb-5">
           <img
