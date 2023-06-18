@@ -7,4 +7,4 @@ npm install @emailjs/browser
 
 ```
 
-[Deploy preview here](marin-portfolio-website.netlify.app)
+[Deploy preview here](https://marin-portfolio-website.netlify.app)
