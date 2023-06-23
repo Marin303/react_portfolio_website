@@ -2,7 +2,8 @@ import React from "react";
 import gifChat from "../Images/chatapp2.gif";
 import passGenImg from "../Images/password-generator.png";
 import ecommerceImg from "../Images/ecommerce-desktop.png";
-import wheaterImg from "../Images/wheater_forecast_desktop.png";
+import wheaterImg from "../Images/wheater-desktop.gif";
+import ipTrackerImg from "../Images/ip-desktop.gif"
 const FeaturedProjects = () => {
   return (
     <div className="featuredContainer" id="projects">
@@ -122,6 +123,36 @@ const FeaturedProjects = () => {
             <div className="link-project rounded-3">
               <a
                 href="https://weather-app-marin.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Project - deploy
+              </a>
+            </div>
+          </div>
+        </section>
+        <section className="projects pb-5">
+          <img
+            className="rounded-top-3"
+            src={ipTrackerImg}
+            alt="wheater-app"
+            style={{ width: "300px", height: "250px" }}
+          />
+          <h2 className="text-white">IP address tracker</h2>
+          <p className="text-white">Tracker created with JavaScript</p>
+          <div className="d-flex">
+            <div className="link-project rounded-3">
+              <a
+                href="https://github.com/Marin303/ip_adress_tracker_javascript"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub - repository
+              </a>
+            </div>
+            <div className="link-project rounded-3">
+              <a
+                href="https://ip-address-tracker-marin.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
               >
