@@ -4,6 +4,7 @@ import passGenImg from "../Images/password-generator.png";
 import ecommerceImg from "../Images/ecommerce-desktop.png";
 import wheaterImg from "../Images/wheater-desktop.gif";
 import ipTrackerImg from "../Images/ip-desktop.gif"
+import restCountriesImg from "../Images/rest-countries.gif"
 const FeaturedProjects = () => {
   return (
     <div className="featuredContainer" id="projects">
@@ -135,7 +136,7 @@ const FeaturedProjects = () => {
           <img
             className="rounded-top-3"
             src={ipTrackerImg}
-            alt="wheater-app"
+            alt="ip-tracker"
             style={{ width: "300px", height: "250px" }}
           />
           <h2 className="text-white">IP address tracker</h2>
@@ -153,6 +154,36 @@ const FeaturedProjects = () => {
             <div className="link-project rounded-3">
               <a
                 href="https://ip-address-tracker-marin.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Project - deploy
+              </a>
+            </div>
+          </div>
+        </section>
+        <section className="projects pb-5">
+          <img
+            className="rounded-top-3"
+            src={restCountriesImg}
+            alt="rest-countries"
+            style={{ width: "300px", height: "250px" }}
+          />
+          <h2 className="text-white">Country search</h2>
+          <p className="text-white">Rest countries created with React</p>
+          <div className="d-flex">
+            <div className="link-project rounded-3">
+              <a
+                href="https://github.com/Marin303/rest-countries-react"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub - repository
+              </a>
+            </div>
+            <div className="link-project rounded-3">
+              <a
+                href="https://rest-countries-marin.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
               >
