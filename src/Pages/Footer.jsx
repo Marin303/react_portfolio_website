@@ -37,7 +37,7 @@ const Footer = () => {
   return (
     <div className="footer" id="contact">
       <div className="text-center">
-        <h2 className="text-white d-inline-block custom-border mt-5 mb-5">
+        <h2 className="text-white d-inline-block custom-border mt-1 mb-5">
           Contact me
         </h2>
       </div>
