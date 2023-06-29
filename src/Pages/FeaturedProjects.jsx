@@ -8,7 +8,7 @@ import restCountriesImg from "../Images/rest-countries.gif"
 const FeaturedProjects = () => {
   return (
     <div className="featuredContainer" id="projects">
-      <h2 className="text-white d-inline-block custom-border mt-5">
+      <h2 className="text-white d-inline-block custom-border mt-1">
         Featured Projects
       </h2>
       <div className="content">

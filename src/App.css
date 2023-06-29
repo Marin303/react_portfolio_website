@@ -66,14 +66,15 @@ nav {
 }
 
 .nameText {
-  margin-left: 12px;
+  margin-left: 15px;
+  padding-left: 30px;
 }
 
 .nameText h2,
 h2 {
   color: var(--primary-100);
   text-shadow: 0 0 10px var(--primary-100);
-
+  padding-top: 20px;
 }
 
 .li-navBar {
@@ -113,11 +114,11 @@ h2 {
   }
 }
 
-
+/*navbar*/
 .btn-content {
   top: 3em;
   right: 0;
-  height: 50vh;
+  /* height: 50vh; */
   position: absolute;
   border: 1px solid var(--hover-color);
   border-top: 0px;
@@ -126,7 +127,6 @@ h2 {
   padding: 10px;
   text-align: center;
   line-height: 5vh;
-  /* background-color: black; */
 }
 
 .btn-content a {
@@ -149,6 +149,7 @@ h2 {
 .btn-content ul {
   padding: 0;
   list-style: none;
+  width: 100%;
 }
 
 .btn-content li {
@@ -250,7 +251,7 @@ h2 {
 .textAbout {
   text-align: left;
   margin-top: -40px;
-  padding-left: 30px;
+  padding: 0 30px;
   color: white;
   margin-bottom: 40px;
 }
@@ -337,6 +338,7 @@ h2 {
 fieldset {
   max-width: 600px;
   border: 1px solid var(--input-outline-color) !important;
+  border-radius: 10px;
 }
 
 legend {
