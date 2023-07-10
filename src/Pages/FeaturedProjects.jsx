@@ -5,6 +5,7 @@ import ecommerceImg from "../Images/ecommerce-desktop.png";
 import wheaterImg from "../Images/wheater-desktop.gif";
 import ipTrackerImg from "../Images/ip-desktop.gif"
 import restCountriesImg from "../Images/rest-countries.gif"
+import linkSharingImg from "../Images/link-sharing.png"
 const FeaturedProjects = () => {
   return (
     <div className="featuredContainer" id="projects">
@@ -188,6 +189,36 @@ const FeaturedProjects = () => {
                 rel="noreferrer"
               >
                 Project - deploy
+              </a>
+            </div>
+          </div>
+        </section>
+        <section className="projects pb-5">
+          <img
+            className="rounded-top-3"
+            src={linkSharingImg}
+            alt="link-sharing"
+            style={{ width: "300px", height: "250px" }}
+          />
+          <h2 className="text-white">Link sharing</h2>
+          <p className="text-white">Link sharing app created with React</p>
+          <div className="d-flex">
+            <div className="link-project rounded-3">
+              <a
+                href="https://github.com/Marin303/link-sharing-app-react"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub - repository
+              </a>
+            </div>
+            <div className="link-project rounded-3">
+              <a
+                href="https://github.com/Marin303/link-sharing-app-react"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Project - in progress
               </a>
             </div>
           </div>
