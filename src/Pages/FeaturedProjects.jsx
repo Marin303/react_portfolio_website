@@ -195,7 +195,7 @@ const FeaturedProjects = () => {
         </section>
         <section className="projects pb-5">
           <img
-            className="rounded-top-3"
+            className="rounded-top-3 object-fit-cover"
             src={linkSharingImg}
             alt="link-sharing"
             style={{ width: "300px", height: "250px" }}

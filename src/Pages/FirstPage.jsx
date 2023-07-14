@@ -110,7 +110,9 @@ const FirstPage = () => {
       </nav>
       <section className="nameText text-white align-items-center justify-content-center">
         <h1>Marin Muktić</h1>
+
         <LetterSpelling trigger={trigger} />
+        
         <div className="ContactContainer">
           <a href="https://www.linkedin.com/in/marin-muktic/">
             <i className="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
