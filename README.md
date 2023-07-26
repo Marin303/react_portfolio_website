@@ -12,4 +12,7 @@ npm install gsap
 ```
 npm install react-slick slick-carousel
 ```
-[Deploy preview here](marin-portfolio-website.netlify.app)
+=======
+
+[Deploy preview here](https://marin-portfolio-website.netlify.app)
+
