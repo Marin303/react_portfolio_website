@@ -7,36 +7,24 @@ import ContactInfo from "../Shared/ContactInfo";
 
 const FirstPage = () => {
   const [visibleContent, setVisibleContent] = useState(false);
-  const [toggleBtnVisible, setToggleBtnVisible] = useState(true);
-  const [closeBtnVisible, setCloseBtnVisible] = useState(false);
   const btnContentRef = useRef(null);
   const [trigger, setTrigger] = useState(false);
 
-  const toggleContent = () => {
-    setVisibleContent(true);
-    setToggleBtnVisible(false);
-    setCloseBtnVisible(true);
-  };
-
-  const btnDisappear = () => {
-    setVisibleContent(false);
-    setToggleBtnVisible(true);
-    setCloseBtnVisible(false);
+  const handleContentVisibility = () => {
+    setVisibleContent((prevVisibleContent) => !prevVisibleContent);
   };
 
   const handleLetterSpellingClick = () => {
     setTrigger((prevTrigger) => !prevTrigger);
   };
 
-  
   useEffect(() => {
     const handleClickOutside = (e) => {
-    const isClickedOutside  = btnContentRef.current && !btnContentRef.current.contains(e.target)
 
-      if (isClickedOutside) {
-        setVisibleContent(false);
-        setToggleBtnVisible(true);
-        setCloseBtnVisible(false);
+      const isClickOutside = btnContentRef.current && !btnContentRef.current.contains(e.target)
+      
+      if (isClickOutside) {
+        handleContentVisibility();
       }
     };
 
@@ -63,28 +51,21 @@ const FirstPage = () => {
           </li>
         </ul>
 
-        {
-        toggleBtnVisible && 
-        (
-          <button onClick={toggleContent}>
-            <OpenSideIcon />
-          </button>
-        )}
-
-        {
-        closeBtnVisible && 
-        (
-          <button onClick={btnDisappear}>
+        <button onClick={handleContentVisibility}>
+          {
+          visibleContent ? 
+          (
             <i className="fa-solid fa-xmark fa-xl"></i>
-          </button>
-        )}
+          ) : 
+          (
+            <OpenSideIcon />
+          )}
+        </button>
 
         {
         visibleContent && 
-        (
-        <NavigationMenu ref={btnContentRef} />
-        )}
-
+           <NavigationMenu ref={btnContentRef} />
+         }
       </nav>
       <section className="nameText text-white align-items-center justify-content-center">
         <h1>Marin Muktić</h1>

@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
 *{
  box-sizing: border-box;
+ font-family: 'Playfair Display', serif;
 }
+
 .App {
   background-color: black;
 }
-.h1, .h2 {
-  margin-top: 0!important;
-}
+
 :root {
   --primary-100: #ff33cc;
   --primary-200: #ff72ff;
@@ -130,6 +132,8 @@ h2 {
   padding: 10px;
   text-align: center;
   line-height: 5vh;
+  height: 100vh;
+  
 }
 
 .btn-content a {
@@ -298,26 +302,36 @@ h2 {
 /*Featured Projects*/
 
 .featuredContainer {
+  height: 100vh;
   padding: 20px;
-  background-color: #252323;
   text-align: center;
 }
-
+.slick-dots li button::before{
+  color: white !important;
+}
 .projects {
   height: auto;
-  border: 2px solid var(--primary-100);
+  border: 1px solid var(--primary-100);
   border-radius: 10px;
   margin: 20px auto;
   display: inline-block;
 }
-
+.content{
+  margin: auto;
+  max-width: 550px;
+}
+/*
 .content {
-  /* margin:20px 180px 0 180px; */
-  padding: 80px;
+   margin:20px 180px 0 180px; */
+/*   padding: 80px;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
 }
+*/
+/* .slick-prev:before, .slick-next:before {
+margin: 20px;
+} */
 
 /*Footer*/
 .footer {
@@ -459,4 +473,8 @@ fieldset>a {
 
 .link-project:hover a {
   color: black;
+}
+
+.customFont span {
+  font-family: sans-serif;
 }
