@@ -5,7 +5,7 @@ import imageOfMe from "../Images/me-img.png";
 const AboutMe = () => {
   return (
     <div className="about-container text-center align-middle pb-5" id="about">
-      <h2 className="text-white d-inline-block custom-border mt-1">About Me</h2>
+      <h2 className="text-white d-inline-block custom-border mt-3">About Me</h2>
       <div className="about-wrapper ">
         <img
           src={programmingImage}
@@ -28,14 +28,19 @@ const AboutMe = () => {
         <div className="textAbout">
           <h3>Marin Muktić</h3>
           <h4>Frontend Developer</h4>
+
           <p>Passionate about technology</p>
           <p>Constantly seeking new opportunities to enhance my experience.</p>
+
           <div className="d-flex flex-wrap align-items-center">
+
             <p className="mb-0">Skills:</p>
+
             <i className="devicon-html5-plain mx-1"> HTML</i>
             <i className="devicon-css3-plain mx-1"> CSS</i>
             <i className="devicon-javascript-plain mx-1"> JS</i>
             <i className="devicon-react-original mx-1"> REACT</i>
+            
           </div>
         </div>
       </div>
