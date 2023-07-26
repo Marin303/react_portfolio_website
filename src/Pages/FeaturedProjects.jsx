@@ -9,7 +9,7 @@ import linkSharingImg from "../Images/link-sharing.png"
 const FeaturedProjects = () => {
   return (
     <div className="featuredContainer" id="projects">
-      <h2 className="text-white d-inline-block custom-border mt-1">
+      <h2 className="text-white d-inline-block custom-border mt-3">
         Featured Projects
       </h2>
       <div className="content">

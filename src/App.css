@@ -1,7 +1,12 @@
+*{
+ box-sizing: border-box;
+}
 .App {
   background-color: black;
 }
-
+.h1, .h2 {
+  margin-top: 0!important;
+}
 :root {
   --primary-100: #ff33cc;
   --primary-200: #ff72ff;
@@ -62,7 +67,6 @@ nav {
 .nameText h1 {
   font-size: 3.5rem;
   text-shadow: 1px 2px 1px var(--primary-300), -1px -2px 1px var(--primary-100);
-  margin: 0;
 }
 
 .nameText {
@@ -250,9 +254,10 @@ h2 {
 .textAbout {
   text-align: left;
   margin-top: -40px;
+  margin-bottom: 40px;
   padding: 0 30px;
   color: white;
-  margin-bottom: 40px;
+  
 }
 
 .textAbout h3 {

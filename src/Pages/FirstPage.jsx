@@ -1,5 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import LetterSpelling from "../Components/LetterSpelling";
+import OpenSideIcon from "../Icons/OpenSide";
+import ArrowDownIcon from "../Icons/ArrowDownIcon";
+import NavigationMenu from "../Shared/NavigationMenu";
+import ContactInfo from "../Shared/ContactInfo";
 
 const FirstPage = () => {
   const [visibleContent, setVisibleContent] = useState(false);
@@ -24,9 +28,12 @@ const FirstPage = () => {
     setTrigger((prevTrigger) => !prevTrigger);
   };
 
+  
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (btnContentRef.current && !btnContentRef.current.contains(e.target)) {
+    const isClickedOutside  = btnContentRef.current && !btnContentRef.current.contains(e.target)
+
+      if (isClickedOutside) {
         setVisibleContent(false);
         setToggleBtnVisible(true);
         setCloseBtnVisible(false);
@@ -56,92 +63,39 @@ const FirstPage = () => {
           </li>
         </ul>
 
-        {toggleBtnVisible && (
+        {
+        toggleBtnVisible && 
+        (
           <button onClick={toggleContent}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-3 h-3"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
+            <OpenSideIcon />
           </button>
         )}
 
-        {closeBtnVisible && (
+        {
+        closeBtnVisible && 
+        (
           <button onClick={btnDisappear}>
             <i className="fa-solid fa-xmark fa-xl"></i>
           </button>
         )}
 
-        {visibleContent && (
-          <div className="btn-content bg-dark bg-gradient" ref={btnContentRef}>
-            <ul>
-              <li>
-                <a href="#home">
-                  <i className="fa-solid fa-house"></i>Home
-                </a>
-              </li>
-              <li>
-                <a href="#about">
-                  <i className="fa-solid fa-gear"></i>About
-                </a>
-              </li>
-              <li>
-                <a href="#projects">
-                  <i className="fa-solid fa-circle-info"></i>Projects
-                </a>
-              </li>
-              <li>
-                <a href="#contact">
-                  <i class="fa-solid fa-envelope"></i>Contact
-                </a>
-              </li>
-            </ul>
-          </div>
+        {
+        visibleContent && 
+        (
+        <NavigationMenu ref={btnContentRef} />
         )}
+
       </nav>
       <section className="nameText text-white align-items-center justify-content-center">
         <h1>Marin Muktić</h1>
 
         <LetterSpelling trigger={trigger} />
-        
-        <div className="ContactContainer">
-          <a href="https://www.linkedin.com/in/marin-muktic/">
-            <i className="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-            Linkedin
-          </a>
-          <a href="https://github.com/Marin303">
-            <i className="fa fa-github fa-2x" aria-hidden="true"></i>Github
-          </a>
-          <a href="mailto:marin.muktic3@gmail.com">
-            <i className="fa fa-envelope fa-2x" aria-hidden="true"></i>Email
-          </a>
-        </div>
+
+        <ContactInfo />
       </section>
       <div className="arrow position-absolute bottom-0 start-50 translate-middle">
         <a href="#about">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6 arrow"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-            />
-          </svg>
+          <ArrowDownIcon />
         </a>
       </div>
     </div>

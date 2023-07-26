@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import ArrowUp from "../Icons/ArrowUp";
+
 const Footer = () => {
   const [checkSend, setCheckSend] = useState(false);
   const handleKeyDown = (e) => {
@@ -37,7 +39,7 @@ const Footer = () => {
   return (
     <div className="footer" id="contact">
       <div className="text-center">
-        <h2 className="text-white d-inline-block custom-border mt-1 mb-5">
+        <h2 className="text-white d-inline-block custom-border mt-3 mb-5">
           Contact me
         </h2>
       </div>
@@ -91,20 +93,7 @@ const Footer = () => {
       <div className="arrow-up-container">
         <a href="#home">
           <div className="arrow-up-wrapper arrow">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-3 h-3"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5"
-              />
-            </svg>
+           <ArrowUp/>
           </div>
         </a>
       </div>
