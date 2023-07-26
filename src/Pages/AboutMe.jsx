@@ -1,7 +1,7 @@
 import React from "react";
 import programmingImage from "../Images/programming.jpg";
 import imageOfMe from "../Images/me-img.png";
-
+import Skills from "../Icons/Skills";
 const AboutMe = () => {
   return (
     <div className="about-container text-center align-middle pb-5" id="about">
@@ -33,14 +33,8 @@ const AboutMe = () => {
           <p>Constantly seeking new opportunities to enhance my experience.</p>
 
           <div className="d-flex flex-wrap align-items-center">
-
             <p className="mb-0">Skills:</p>
-
-            <i className="devicon-html5-plain mx-1"> HTML</i>
-            <i className="devicon-css3-plain mx-1"> CSS</i>
-            <i className="devicon-javascript-plain mx-1"> JS</i>
-            <i className="devicon-react-original mx-1"> REACT</i>
-            
+              <Skills/>
           </div>
         </div>
       </div>
