@@ -318,20 +318,8 @@ h2 {
 }
 .content{
   margin: auto;
-  max-width: 550px;
+  max-width: 310px;
 }
-/*
-.content {
-   margin:20px 180px 0 180px; */
-/*   padding: 80px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; 
-}
-*/
-/* .slick-prev:before, .slick-next:before {
-margin: 20px;
-} */
 
 /*Footer*/
 .footer {
