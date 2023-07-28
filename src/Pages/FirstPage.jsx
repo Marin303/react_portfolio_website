@@ -24,7 +24,7 @@ const FirstPage = () => {
       const isClickOutside = btnContentRef.current && !btnContentRef.current.contains(e.target)
       
       if (isClickOutside) {
-        handleContentVisibility();
+        handleContentVisibility()
       }
     };
 
@@ -34,7 +34,6 @@ const FirstPage = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
   return (
     <div
       className="wrapper d-flex flex-column align-items-start justify-content-center"
@@ -44,14 +43,14 @@ const FirstPage = () => {
         <ul className="ulNav d-flex justify-content-center">
           <li className="li-navBar mt-1">
             &lt;&gt;
-            <a href="/" onClick={handleLetterSpellingClick}>
+            <a href="/" onClick={handleLetterSpellingClick} aria-label="letter spelling Frontend Developer">
               MARIN DEV
             </a>
             &lt;/&gt;
           </li>
         </ul>
 
-        <button onClick={handleContentVisibility}>
+        <button onClick={handleContentVisibility} aria-label="openSideBar">
           {
           visibleContent ? 
           (
@@ -64,7 +63,7 @@ const FirstPage = () => {
 
         {
         visibleContent && 
-           <NavigationMenu ref={btnContentRef} />
+           <NavigationMenu ref={btnContentRef}/>
          }
       </nav>
       <section className="nameText text-white align-items-center justify-content-center">
@@ -75,7 +74,7 @@ const FirstPage = () => {
         <ContactInfo />
       </section>
       <div className="arrow position-absolute bottom-0 start-50 translate-middle">
-        <a href="#about">
+        <a href="#about" aria-label="Read more about me">
           <ArrowDownIcon />
         </a>
       </div>

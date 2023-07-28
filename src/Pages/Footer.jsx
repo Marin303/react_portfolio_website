@@ -91,7 +91,7 @@ const Footer = () => {
         </fieldset>
       </div>
       <div className="arrow-up-container">
-        <a href="#home">
+        <a href="#home" aria-label="back to home">
           <div className="arrow-up-wrapper arrow">
            <ArrowUp/>
           </div>

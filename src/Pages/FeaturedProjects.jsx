@@ -10,7 +10,7 @@ import WeatherForecast from "../Projects/WeatherForecast";
 import IpadressTracker from "../Projects/IpadressTracker";
 import CountrySearch from "../Projects/CountrySearch";
 import LinkSharingApp from "../Projects/LinkSharingApp";
-/* import ArrowDownIcon from "../Icons/ArrowDownIcon"; */
+
 
 const FeaturedProjects = () => {
   const settings = {

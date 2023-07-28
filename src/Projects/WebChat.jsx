@@ -1,5 +1,5 @@
 import React from "react";
-import gifChat from "../Images/chatapp2.gif";
+import gifChat from "../Images/chatapp.gif";
 
 const WebChat = () => {
   return (
@@ -8,7 +8,7 @@ const WebChat = () => {
         className="rounded-top-3"
         src={gifChat}
         alt="chat-gif"
-        style={{ width: "300px", maxHeight: "250px" }}
+        style={{ width: "100%", height: "250px" }}
       />
       <h2 className="text-white">Web Chat App</h2>
       <p className="text-white">Chat created with React</p>
