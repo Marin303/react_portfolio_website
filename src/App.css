@@ -2,7 +2,7 @@
 
 *{
  box-sizing: border-box;
- font-family: 'Playfair Display', serif;
+ font-family: 'Playfair Display', serif, sans-serif;
 }
 
 .App {
@@ -10,13 +10,17 @@
 }
 
 :root {
-  --primary-100: #ff33cc;
-  --primary-200: #ff72ff;
+  --primary-100: #b3008d;
+  --primary-200: #e600bf;
   --primary-300: #ffe1ff;
   --scollbar-primary-color: #ff33cc96;
   --glitch-color: #00f3ff9a;
   --input-outline-color: #333333;
   --hover-color: #e5e5e5;
+}
+
+.customFont span {
+  font-family: serif, sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -123,7 +127,6 @@ h2 {
 .btn-content {
   top: 3em;
   right: 0;
-  /* height: 50vh; */
   position: absolute;
   border: 1px solid var(--hover-color);
   border-top: 0px;
@@ -132,9 +135,21 @@ h2 {
   padding: 10px;
   text-align: center;
   line-height: 5vh;
-  height: 100vh;
+  height: 100vh; 
+  animation: slide-in 0.9s;
   
 }
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
 
 .btn-content a {
   display: block;
@@ -256,12 +271,6 @@ h2 {
   .image-container{
     margin: auto
   }
-}
-
-.imageOfMe {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
 }
 
 .textAbout {
@@ -472,6 +481,3 @@ fieldset>a {
   color: black;
 }
 
-.customFont span {
-  font-family: sans-serif;
-}
