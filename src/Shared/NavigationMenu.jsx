@@ -1,9 +1,9 @@
 import React from "react";
 
-const NavigationMenu  = React.forwardRef(( _, btnContentRef) => {
-  
+const NavigationMenu  = React.forwardRef(( {isVisible}, btnContentRef) => {
+  const menuClass = isVisible ? "btn-content open" : "btn-content close"
   return (
-    <div className="btn-content bg-dark bg-gradient" ref={btnContentRef}>
+    <div className={`${menuClass} btn-content bg-dark bg-gradient`} ref={btnContentRef}>
       <ul>
         <li>
           <a href="#home">
