@@ -125,6 +125,8 @@ h2 {
 
 /*navbar*/
 .btn-content {
+  background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(40,1,119,1) 76%, rgba(1,0,4,0.7819502801120448) 100%);
   top: 3em;
   right: 0;
   position: absolute;
@@ -162,10 +164,6 @@ h2 {
     transform: translateX(100%);
   }
 }
-
-
-
-
 
 .btn-content a {
   display: block;
@@ -267,6 +265,7 @@ h2 {
   width: 800px;
   max-width: 80%;
   margin: 30px auto;
+  background: linear-gradient(90deg, rgba(0,0,0,0.6026785714285714) 0%, rgba(5,12,14,1) 55%, rgba(2,16,19,1) 85%, rgba(24,11,82,1) 100%);
 }
 
  .coverImage {
@@ -339,6 +338,7 @@ h2 {
   height: 100vh;
   padding: 20px;
   text-align: center;
+  background: linear-gradient(90deg, rgba(0,0,0,0.6026785714285714) 0%, rgba(5,12,14,1) 55%, rgba(2,16,19,1) 85%, rgba(24,11,82,1) 100%);
 }
 .slick-dots li button::before{
   color: white !important;
