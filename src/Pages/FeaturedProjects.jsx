@@ -23,7 +23,7 @@ const FeaturedProjects = () => {
   
 
   return (
-    <div className="featuredContainer bg-dark" id="projects">
+    <div className="featuredContainer" id="projects">
       <h2 className="text-white d-inline-block custom-border mt-3">
         Featured Projects
       </h2>
