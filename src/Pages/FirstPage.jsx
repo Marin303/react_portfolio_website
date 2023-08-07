@@ -20,7 +20,9 @@ const FirstPage = () => {
   }, [isVisible]);
 
   useEffect(() => {
-    if (!isVisible && isMounted) {
+    const isClosing = !isVisible && isMounted
+
+    if (isClosing) {
       const timer = setTimeout(() => setIsMounted(false), 900);
       return () => clearTimeout(timer);
     }
@@ -75,7 +77,8 @@ const FirstPage = () => {
           )}
         </button>
 
-        {isMounted && (
+        {
+        isMounted && (
           <NavigationMenu ref={btnContentRef} isVisible={isVisible} />
         )}
       </nav>

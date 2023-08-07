@@ -370,10 +370,6 @@ h2 {
   border-radius: 10px;
 }
 
-.contact-container:hover {
-  border: 1px solid var(--hover-color) !important;
-  outline: none;
-}
 
 fieldset {
   max-width: 600px;
