@@ -136,10 +136,15 @@ h2 {
   text-align: center;
   line-height: 5vh;
   height: 100vh; 
-  animation: slide-in 0.9s;
-  
 }
 
+.btn-content.open {
+  animation: slide-in 0.9s forwards;
+}
+
+.btn-content.close {
+  animation: slide-out 0.9s forwards;
+}
 @keyframes slide-in {
   0% {
     transform: translateX(100%);
@@ -148,6 +153,17 @@ h2 {
     transform: translateX(0);
   }
 }
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
 
 
 
