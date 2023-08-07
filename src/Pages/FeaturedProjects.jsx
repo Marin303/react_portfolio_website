@@ -29,13 +29,13 @@ const FeaturedProjects = () => {
       </h2>
       <div className="content mt-5">
         <Slider {...settings}>
+          <LinkSharingApp/>
+          <Ecommerce/> 
+          <CountrySearch/>
           <WebChat/>
           <PasswordGen/>
-          <Ecommerce/>
           <WeatherForecast/>
           <IpadressTracker/>
-          <CountrySearch/>
-          <LinkSharingApp/>
         </Slider>
       </div>
     </div>
