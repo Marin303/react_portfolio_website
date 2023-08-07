@@ -6,7 +6,7 @@
 }
 
 .App {
-  background-color: black;
+  background-color: #021027;
 }
 
 :root {
@@ -52,11 +52,37 @@ body::-webkit-scrollbar {
 }
 
 .wrapper {
-  background: url("./Images/night-sky-background.jpg") center / cover no-repeat;
+  background: url("./Images/sky.jpg") center / cover no-repeat;
   height: 100vh;
   margin: 0;
+  position: relative;
+  overflow: hidden;
 }
 
+.circle-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--size);
+  height: var(--size);
+  animation: move var(--duration) linear infinite;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: white;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(calc(100vw * var(--x)), calc(100vh * var(--y)));
+  }
+  100% {
+    transform: translate(calc(100vw * var(--x)), calc(-50vh * var(--y)));
+  }
+}
 nav {
   position: fixed;
   top: 0;

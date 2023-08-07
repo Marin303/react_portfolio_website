@@ -4,6 +4,7 @@ import OpenSideIcon from "../Icons/OpenSide";
 import ArrowDownIcon from "../Icons/ArrowDownIcon";
 import NavigationMenu from "../Shared/NavigationMenu";
 import ContactInfo from "../Shared/ContactInfo";
+import FloatingCircles from "../Components/FloatingCircles";
 
 const FirstPage = () => {
   const btnContentRef = useRef(null);
@@ -54,6 +55,7 @@ const FirstPage = () => {
       className="wrapper d-flex flex-column align-items-start justify-content-center"
       id="home"
     >
+      <FloatingCircles/>
       <nav className="bg-dark bg-gradient">
         <ul className="ulNav d-flex justify-content-center">
           <li className="li-navBar mt-1">
