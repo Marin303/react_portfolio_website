@@ -90,7 +90,7 @@ const FirstPage = () => {
 
         <ContactInfo />
       </section>
-      <div className="arrow position-absolute bottom-0 start-50 translate-middle">
+      <div className="arrow-animation position-absolute bottom-0 start-50 mb-5">
         <a href="#about" aria-label="Read more about me">
           <ArrowDownIcon />
         </a>
