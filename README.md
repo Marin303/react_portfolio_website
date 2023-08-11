@@ -1,5 +1,5 @@
 ```
-npm install @emailjs/browser
+npm i @emailjs/browser
 
 ```
 ### included later
@@ -7,10 +7,13 @@ npm install @emailjs/browser
 npm i bootstrap@5.3.0
 ```
 ```
-npm install gsap
+npm i gsap
 ```
 ```
-npm install react-slick slick-carousel
+npm i react-slick slick-carousel
+```
+```
+npm i react-router-dom
 ```
 
 [Deploy preview here](https://marin-portfolio-website.netlify.app)

@@ -1,5 +1,5 @@
 import React from "react";
-import linkSharingImg from "../Images/link-sharing.png";
+import linkSharingImg from "../Images/link-sharing.webp";
 
 const LinkSharingApp = () => {
   return (
@@ -24,11 +24,11 @@ const LinkSharingApp = () => {
         </div>
         <div className="link-project rounded-3">
           <a
-            href="https://github.com/Marin303/link-sharing-app-react"
+            href="https://link-sharing-app-react.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
-            Project - in progress
+            Project - deploy
           </a>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 import WebChat from "../Projects/WebChat";
 import PasswordGen from "../Projects/PasswordGen";
@@ -11,16 +12,14 @@ import IpadressTracker from "../Projects/IpadressTracker";
 import CountrySearch from "../Projects/CountrySearch";
 import LinkSharingApp from "../Projects/LinkSharingApp";
 
-
 const FeaturedProjects = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   };
-  
 
   return (
     <div className="featuredContainer" id="projects">
@@ -29,15 +28,18 @@ const FeaturedProjects = () => {
       </h2>
       <div className="content mt-5">
         <Slider {...settings}>
-          <LinkSharingApp/>
-          <Ecommerce/> 
-          <CountrySearch/>
-          <WebChat/>
-          <PasswordGen/>
-          <WeatherForecast/>
-          <IpadressTracker/>
+          <LinkSharingApp />
+          <Ecommerce />
+          <CountrySearch />
+          <WebChat />
+          <PasswordGen />
+          <WeatherForecast />
+          <IpadressTracker />
         </Slider>
       </div>
+      <Link to="/preview">
+        <button className="m-5 btn btn-primary">Show all projects</button>
+      </Link>
     </div>
   );
 };
