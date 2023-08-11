@@ -364,8 +364,6 @@ h2 {
 /*Featured Projects*/
 
 .featuredContainer {
-  padding: 30px;
-  text-align: center;
   background: linear-gradient(90deg, rgba(0,0,0,0.6026785714285714) 0%, rgba(5,12,14,1) 55%, rgba(2,16,19,1) 85%, rgba(24,11,82,1) 100%);
 }
 .slick-dots li button::before{
@@ -523,8 +521,12 @@ fieldset>a {
   color: black;
 }
 
-.fixedSize{
-  width: 300px;
-  height: 250px;
+.w-300px {
+    width: 300px;
 }
 
+.fixedSize{
+  width:100%;
+  max-width:300px;
+  height: 250px;
+}

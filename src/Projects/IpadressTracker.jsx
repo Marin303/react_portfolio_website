@@ -3,16 +3,15 @@ import ipTrackerImg from "../Images/ip-desktop.gif"
 
 const IpadressTracker = () => {
   return (
-    <section className="projects pb-5">
+    <section className="projects pb-5 w-300px">
       <img
-        className="rounded-top-3"
+        className="rounded-top-3 fixedSize"
         src={ipTrackerImg}
         alt="ip-tracker"
-        style={{ width: "300px", height: "250px" }}
       />
       <h2 className="text-white">IP address tracker</h2>
       <p className="text-white">Tracker created with JavaScript</p>
-      <div className="d-flex">
+      <div className="d-flex flex-wrap">
         <div className="link-project rounded-3">
           <a
             href="https://github.com/Marin303/ip_adress_tracker_javascript"

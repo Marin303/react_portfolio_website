@@ -3,16 +3,15 @@ import gifChat from "../Images/chatapp.gif";
 
 const WebChat = () => {
   return (
-    <section className="projects pb-5">
+    <section className="projects pb-5 w-300px">
       <img
-        className="rounded-top-3"
+        className="rounded-top-3 fixedSize"
         src={gifChat}
         alt="chat-gif"
-        style={{ width: "300px", height: "250px" }}
       />
       <h2 className="text-white">Web Chat App</h2>
       <p className="text-white">Chat created with React</p>
-      <div className="d-flex">
+      <div className="d-flex flex-wrap">
         <div className="link-project rounded-3">
           <a
             href="https://github.com/Marin303/react_webchat_scaledrone"
