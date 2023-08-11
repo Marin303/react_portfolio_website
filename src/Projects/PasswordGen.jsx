@@ -2,16 +2,15 @@ import React from "react";
 import passGenImg from "../Images/password-generator.png";
 const PasswordGen = () => {
   return (
-    <section className="projects pb-5">
+    <section className="projects pb-5 w-300px">
       <img
-        className="rounded-top-3"
+        className="rounded-top-3 fixedSize"
         src={passGenImg}
         alt="password-generator"
-        style={{ width: "300px", height: "250px" }}
       />
       <h2 className="text-white">Password Generator</h2>
       <p className="text-white">Password generator tool</p>
-      <div className="d-flex">
+      <div className="d-flex flex-wrap">
         <div className="link-project rounded-3">
           <a
             href="https://github.com/Marin303/react_password_generator"

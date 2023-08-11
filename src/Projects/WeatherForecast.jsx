@@ -2,16 +2,15 @@ import React from "react";
 import wheaterImg from "../Images/wheater-desktop.gif";
 const WeatherForecast = () => {
   return (
-    <section className="projects pb-5">
+    <section className="projects pb-5 w-300px">
       <img
-        className="rounded-top-3"
+        className="rounded-top-3 fixedSize"
         src={wheaterImg}
         alt="wheater-app"
-        style={{ width: "300px", height: "250px" }}
       />
       <h2 className="text-white">Wheater forecast</h2>
       <p className="text-white">Real-time weather forecast app</p>
-      <div className="d-flex">
+      <div className="d-flex flex-wrap">
         <div className="link-project rounded-3">
           <a
             href="https://github.com/Marin303/wheater_forecast_react"

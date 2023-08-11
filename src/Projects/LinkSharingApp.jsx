@@ -3,16 +3,15 @@ import linkSharingImg from "../Images/link-sharing.webp";
 
 const LinkSharingApp = () => {
   return (
-    <section className="projects pb-5">
+    <section className="projects pb-5 w-300px">
       <img
-        className="rounded-top-3 object-fit-cover"
+        className="rounded-top-3 fixedSize object-fit-cover"
         src={linkSharingImg}
         alt="link-sharing"
-        style={{ width: "300px", height: "250px" }}
       />
       <h2 className="text-white">Link sharing</h2>
       <p className="text-white">Link sharing app created with React</p>
-      <div className="d-flex">
+      <div className="d-flex flex-wrap">
         <div className="link-project rounded-3">
           <a
             href="https://github.com/Marin303/link-sharing-app-react"

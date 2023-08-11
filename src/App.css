@@ -243,10 +243,13 @@ h2 {
   transform: translateY(-4px);
   color: var(--primary-100);
 }
-
 .arrow {
   color: var(--primary-100);
   width: 50px;
+ 
+}
+
+.arrow-animation {
   animation: arrow-animation 5s ease-in-out infinite;
 }
 
@@ -361,23 +364,23 @@ h2 {
 /*Featured Projects*/
 
 .featuredContainer {
-  padding: 20px;
-  text-align: center;
   background: linear-gradient(90deg, rgba(0,0,0,0.6026785714285714) 0%, rgba(5,12,14,1) 55%, rgba(2,16,19,1) 85%, rgba(24,11,82,1) 100%);
 }
 .slick-dots li button::before{
   color: white !important;
 }
 .projects {
-  height: auto;
+ 
   border: 1px solid var(--primary-100);
   border-radius: 10px;
-  margin: 20px auto;
-  display: inline-block;
+  height: auto;
+  margin: 20px auto; 
+  max-width: calc(100% - 100px);
+  display: inline-block; 
 }
 .content{
-  margin: auto;
-  max-width: 310px;
+  margin: 20px auto;
+  
 }
 
 /*Footer*/
@@ -518,7 +521,12 @@ fieldset>a {
   color: black;
 }
 
+.w-300px {
+    width: 300px;
+}
+
 .fixedSize{
-width: 300px;
-height: 250px;
+  width:100%;
+  max-width:300px;
+  height: 250px;
 }
