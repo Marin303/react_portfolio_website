@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import WebChat from "../Projects/WebChat";
@@ -10,6 +10,10 @@ import CountrySearch from "../Projects/CountrySearch";
 import LinkSharingApp from "../Projects/LinkSharingApp";
 
 const Projects = () => {
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
+
   return (
     <div className="text-center">
       <h2 className="text-white custom-border">
