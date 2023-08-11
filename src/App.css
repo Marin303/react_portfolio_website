@@ -361,7 +361,6 @@ h2 {
 /*Featured Projects*/
 
 .featuredContainer {
-  height: 100vh;
   padding: 20px;
   text-align: center;
   background: linear-gradient(90deg, rgba(0,0,0,0.6026785714285714) 0%, rgba(5,12,14,1) 55%, rgba(2,16,19,1) 85%, rgba(24,11,82,1) 100%);

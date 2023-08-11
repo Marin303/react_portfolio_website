@@ -4,15 +4,26 @@ import FirstPage from "./Pages/FirstPage";
 import AboutMe from "./Pages/AboutMe";
 import FeaturedProjects from "./Pages/FeaturedProjects";
 import Footer from "./Pages/Footer";
-function App() {
-  return (
-    <div className="App">
-      <FirstPage />
-      <AboutMe/>
-      <FeaturedProjects/>
-      <Footer/>
-    </div>
-  );
-}
+import Projects from "./Pages/Projects";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-export default App;
+const App = () => {
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={
+            <>
+              <FirstPage />
+              <AboutMe />
+              <FeaturedProjects />
+              <Footer />
+            </>
+          } />
+          <Route path="/preview" element={<Projects />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+};
+export default App
