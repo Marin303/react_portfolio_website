@@ -11,7 +11,7 @@ const FloatingCircles = () => {
                          '--x': Math.random(), 
                          '--y': Math.random(), 
                          '--size': Math.random() * 10 + 'px', 
-                         '--duration': Math.random() * 10 + 5 + 's', 
+                         '--duration': Math.random() * 15 + 10 + 's', 
                      }}
                 >
                     <div className="circle"></div>

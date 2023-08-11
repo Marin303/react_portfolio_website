@@ -64,8 +64,7 @@ const FirstPage = () => {
               href="/"
               onClick={handleLetterSpellingClick}
               aria-label="letter spelling Frontend Developer"
-            >
-              MARIN DEV
+            >           MARIN DEV
             </a>
             &lt;/&gt;
           </li>
