@@ -5,6 +5,7 @@ import ArrowDownIcon from "../Icons/ArrowDownIcon";
 import NavigationMenu from "../Shared/NavigationMenu";
 import ContactInfo from "../Shared/ContactInfo";
 import FloatingCircles from "../Components/FloatingCircles";
+import codeTypingImg from "../Images/Code-typing.gif";
 
 const FirstPage = () => {
   const btnContentRef = useRef(null);
@@ -21,7 +22,7 @@ const FirstPage = () => {
   }, [isVisible]);
 
   useEffect(() => {
-    const isClosing = !isVisible && isMounted
+    const isClosing = !isVisible && isMounted;
 
     if (isClosing) {
       const timer = setTimeout(() => setIsMounted(false), 900);
@@ -52,19 +53,21 @@ const FirstPage = () => {
 
   return (
     <div
-      className="wrapper d-flex flex-column align-items-start justify-content-center"
+      className="wrapper d-flex flex-column justify-content-center m-0 position-relative overflow-hidden"
       id="home"
     >
-      <FloatingCircles/>
-      <nav className="bg-dark bg-gradient">
-        <ul className="ulNav d-flex justify-content-center">
-          <li className="li-navBar mt-1">
+      <FloatingCircles />
+      <nav className="bg-dark bg-gradient position-fixed top-0 left-0 w-100 d-flex justify-content-center">
+        <ul className="ulNav d-flex justify-content-center align-items-center h-100">
+          <li className="li-navBar">
             &lt;&gt;
             <a
               href="/"
               onClick={handleLetterSpellingClick}
               aria-label="letter spelling Frontend Developer"
-            >           MARIN DEV
+            >
+              {" "}
+              MARIN DEV
             </a>
             &lt;/&gt;
           </li>
@@ -78,17 +81,19 @@ const FirstPage = () => {
           )}
         </button>
 
-        {
-        isMounted && (
+        {isMounted && (
           <NavigationMenu ref={btnContentRef} isVisible={isVisible} />
         )}
       </nav>
-      <section className="nameText text-white align-items-center justify-content-center">
-        <h1>Marin Muktić</h1>
+      <section className="repon d-flex justify-content-between flex-wrap mt-5">
+        <aside className="nameText text-white p-4">
+          <h1>Marin Muktić</h1>
 
-        <LetterSpelling trigger={trigger} />
+          <LetterSpelling trigger={trigger} />
 
-        <ContactInfo />
+          <ContactInfo />
+        </aside>
+        <img src={codeTypingImg} alt="code typing" className="codeType rounded" />
       </section>
       <div className="arrow-animation position-absolute bottom-0 start-50 mb-5">
         <a href="#about" aria-label="Read more about me">

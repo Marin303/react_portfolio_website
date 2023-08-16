@@ -1,5 +1,5 @@
 import React from "react";
-import wheaterImg from "../Images/wheater-desktop.gif";
+import wheaterImg from "../Images/wheater-desktop.png";
 const WeatherForecast = () => {
   return (
     <section className="projects pb-5 w-300px">
