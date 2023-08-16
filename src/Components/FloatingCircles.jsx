@@ -5,16 +5,20 @@ const FloatingCircles = () => {
 
     return (
         <>
-            {circles.map(circle => (
-                <div className="circle-wrapper" key={circle} 
-                     style={{
-                         '--x': Math.random(), 
-                         '--y': Math.random(), 
-                         '--size': Math.random() * 10 + 'px', 
-                         '--duration': Math.random() * 15 + 10 + 's', 
+            {
+            circles.map(circle => 
+            (
+                <div 
+                 className="circle-wrapper position-absolute top-0 left-0 rounded-circle" 
+                 key={circle} 
+                 style={{
+                  '--x': Math.random(), 
+                  '--y': Math.random(), 
+                  '--size': Math.random() * 10 + 'px', 
+                  '--duration': Math.random() * 15 + 10 + 's', 
                      }}
                 >
-                    <div className="circle"></div>
+                    <div className="circle w-100 h-100"></div>
                 </div>
             ))}
         </>
