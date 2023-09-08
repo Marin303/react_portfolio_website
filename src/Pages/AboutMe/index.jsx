@@ -1,5 +1,4 @@
 import React from "react";
-import programmingImage from "../../Images/programming.jpg";
 import imageOfMe from "../../Images/me-img.png";
 import Skills from "../../Icons/Skills";
 
@@ -8,11 +7,6 @@ const AboutMe = () => {
     <div className="about-container text-center align-middle pb-5" id="about">
       <h2 className="text-white d-inline-block custom-border mt-3">About Me</h2>
       <div className="about-wrapper">
-        <img
-          src={programmingImage}
-          alt="programming"
-          className="rounded-top coverImage"
-        />
         <div className="image-container">
           <img
             src={imageOfMe}

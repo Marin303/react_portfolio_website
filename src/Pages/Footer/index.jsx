@@ -102,7 +102,6 @@ const Footer = () => {
           &#169;2023 | Developed by{" "}
           <a href="https://github.com/Marin303">Marin Muktić</a>
         </p>
-        <p>All rights reserved</p>
       </div>
     </div>
   );

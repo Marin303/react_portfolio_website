@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+// https://sass-lang.com/documentation/variables/
+// Pročitaj Heads up!
+:root {
+  --primary-100: #142240;
+  --primary-200: #0F1626;
+  --primary-300: #8593A6;
+  --scollbar-primary-color: #5FD9C2;
+  --glitch-color: #49A695;
+  --input-outline-color: #D9DFE8;
+  --hover-color: red;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}

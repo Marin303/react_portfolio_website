@@ -7,7 +7,7 @@ import Footer from "./Pages/Footer";
 
 const App = () => {
   return (
-    <div className="bg-dark">
+    <div className="app bg-dark">
       <FirstPage />
       <AboutMe />
       <FeaturedProjects />

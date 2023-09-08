@@ -5,7 +5,6 @@ import ArrowDownIcon from "../../Icons/ArrowDown";
 import NavigationMenu from "../../Shared/NavigationMenu";
 import ContactInfo from "../../Shared/ContactInfo";
 import FloatingCircles from "../../Components/FloatingCircles";
-import codeTypingImg from "../../Images/Code-typing.gif";
 
 const FirstPage = () => {
   const btnContentRef = useRef(null);
@@ -58,21 +57,6 @@ const FirstPage = () => {
     >
       <FloatingCircles />
       <nav className="bg-dark bg-gradient position-fixed top-0 left-0 w-100 d-flex justify-content-center">
-        <ul className="ulNav d-flex justify-content-center align-items-center h-100">
-          <li className="li-navBar">
-            &lt;&gt;
-            <a
-              href="/"
-              onClick={handleLetterSpellingClick}
-              aria-label="letter spelling Frontend Developer"
-            >
-              {" "}
-              MARIN DEV
-            </a>
-            &lt;/&gt;
-          </li>
-        </ul>
-
         <button onClick={handleContentVisibility} aria-label="openSideBar">
           {isVisible ? (
             <i className="fa-solid fa-xmark fa-xl"></i>
@@ -93,7 +77,6 @@ const FirstPage = () => {
 
           <ContactInfo />
         </aside>
-        <img src={codeTypingImg} alt="code typing" className="codeType rounded" />
       </section>
       <div className="arrow-animation position-absolute bottom-0 start-50 mb-5">
         <a href="#about" aria-label="Read more about me">
