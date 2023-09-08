@@ -1,20 +1,19 @@
 import React from "react";
-import gifChat from "../Images/chatapp.gif";
-
-const WebChat = () => {
+import wheaterImg from "../../Images/wheater-desktop.png";
+const WeatherForecast = () => {
   return (
     <section className="projects pb-5 w-300px">
       <img
         className="rounded-top-3 fixedSize"
-        src={gifChat}
-        alt="chat-gif"
+        src={wheaterImg}
+        alt="wheater-app"
       />
-      <h2 className="text-white">Web Chat App</h2>
-      <p className="text-white">Chat created with React</p>
+      <h2 className="text-white">Wheater forecast</h2>
+      <p className="text-white">Real-time weather forecast app</p>
       <div className="d-flex flex-wrap">
         <div className="link-project rounded-3">
           <a
-            href="https://github.com/Marin303/react_webchat_scaledrone"
+            href="https://github.com/Marin303/wheater_forecast_react"
             target="_blank"
             rel="noreferrer"
           >
@@ -23,7 +22,7 @@ const WebChat = () => {
         </div>
         <div className="link-project rounded-3">
           <a
-            href="https://chat-app-marin.netlify.app/"
+            href="https://weather-app-marin.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
@@ -35,4 +34,4 @@ const WebChat = () => {
   );
 };
 
-export default WebChat;
+export default WeatherForecast;

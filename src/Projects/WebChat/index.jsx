@@ -1,20 +1,20 @@
 import React from "react";
-import ipTrackerImg from "../Images/ip-desktop.gif"
+import gifChat from "../../Images/chatapp.gif";
 
-const IpadressTracker = () => {
+const WebChat = () => {
   return (
     <section className="projects pb-5 w-300px">
       <img
         className="rounded-top-3 fixedSize"
-        src={ipTrackerImg}
-        alt="ip-tracker"
+        src={gifChat}
+        alt="chat-gif"
       />
-      <h2 className="text-white">IP address tracker</h2>
-      <p className="text-white">Tracker created with JavaScript</p>
+      <h2 className="text-white">Web Chat App</h2>
+      <p className="text-white">Chat created with React</p>
       <div className="d-flex flex-wrap">
         <div className="link-project rounded-3">
           <a
-            href="https://github.com/Marin303/ip_adress_tracker_javascript"
+            href="https://github.com/Marin303/react_webchat_scaledrone"
             target="_blank"
             rel="noreferrer"
           >
@@ -23,7 +23,7 @@ const IpadressTracker = () => {
         </div>
         <div className="link-project rounded-3">
           <a
-            href="https://ip-address-tracker-marin.netlify.app/"
+            href="https://chat-app-marin.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
@@ -35,4 +35,4 @@ const IpadressTracker = () => {
   );
 };
 
-export default IpadressTracker;
+export default WebChat;

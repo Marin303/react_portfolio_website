@@ -1,7 +1,7 @@
 import React from "react";
-import programmingImage from "../Images/programming.jpg";
-import imageOfMe from "../Images/me-img.png";
-import Skills from "../Icons/Skills";
+import programmingImage from "../../Images/programming.jpg";
+import imageOfMe from "../../Images/me-img.png";
+import Skills from "../../Icons/Skills";
 
 const AboutMe = () => {
   return (
@@ -14,10 +14,10 @@ const AboutMe = () => {
           className="rounded-top coverImage"
         />
         <div className="image-container">
-          <img 
-            src={imageOfMe} 
-            alt="me" 
-            className="imageOfMe rounded-circle object-fit-cover w-100 h-100" 
+          <img
+            src={imageOfMe}
+            alt="me"
+            className="imageOfMe rounded-circle object-fit-cover w-100 h-100"
           />
         </div>
         <div className="textAbout">
@@ -25,7 +25,7 @@ const AboutMe = () => {
           <h4>Frontend Developer</h4>
           <p>Passionate about technology</p>
           <p>Constantly seeking new opportunities to enhance my experience.</p>
-          
+
           <div className="d-flex flex-wrap align-items-center">
             <p className="mb-0">Skills:</p>
             <Skills />

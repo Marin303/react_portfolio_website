@@ -1,5 +1,5 @@
 import React from "react";
-import linkSharingImg from "../Images/link-sharing.webp";
+import linkSharingImg from "../../Images/link-sharing.webp";
 
 const LinkSharingApp = () => {
   return (

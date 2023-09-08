@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import WebChat from "../Projects/WebChat";
-import PasswordGen from "../Projects/PasswordGen";
-import Ecommerce from "../Projects/Ecommerce";
-import WeatherForecast from "../Projects/WeatherForecast";
-import IpadressTracker from "../Projects/IpadressTracker";
-import CountrySearch from "../Projects/CountrySearch";
-import LinkSharingApp from "../Projects/LinkSharingApp";
-import ArrowDownIcon from "../Icons/ArrowDownIcon";
+import WebChat from "../../Projects/WebChat";
+import PasswordGen from "../../Projects/PasswordGen";
+import Ecommerce from "../../Projects/Ecommerce";
+import WeatherForecast from "../../Projects/WeatherForecast";
+import IpaddressTracker from "../../Projects/IpaddressTracker";
+import CountrySearch from "../../Projects/CoutrySearch";
+import LinkSharingApp from "../../Projects/LinkSharingApp";
+import ArrowDownIcon from "../../Icons/ArrowDown";
 
 const FeaturedProjects = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);
@@ -33,22 +33,22 @@ const FeaturedProjects = () => {
         <Ecommerce />
         <CountrySearch />
         {
-        showAllProjects && 
-        (
-          <>
-            <WebChat />
-            <PasswordGen />
-            <WeatherForecast />
-            <IpadressTracker />
-          </>
-        )}
+          showAllProjects &&
+          (
+            <>
+              <WebChat />
+              <PasswordGen />
+              <WeatherForecast />
+              <IpaddressTracker />
+            </>
+          )}
       </div>
       {
-      isExpanded ? (
-        <p>Click arrow to close expanded projects</p>
-      ) : (
-        <p>Click arrow to explore all projects</p>
-      )}
+        isExpanded ? (
+          <p>Click arrow to close expanded projects</p>
+        ) : (
+          <p>Click arrow to explore all projects</p>
+        )}
       <div className="d-flex justify-content-center w-100">
         <button
           className="btn btn-link p-0 border-0 bg-transparent"

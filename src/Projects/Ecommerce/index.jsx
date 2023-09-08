@@ -1,19 +1,20 @@
-import React from "react";
-import restCountriesImg from "../Images/rest-countries.gif"
-const CountrySearch = () => {
+import React from 'react'
+import ecommerceImg from "../../Images/ecommerce-desktop.png";
+
+const Ecommerce = () => {
   return (
     <section className="projects pb-5 w-300px">
       <img
         className="rounded-top-3 fixedSize"
-        src={restCountriesImg}
-        alt="rest-countries"
+        src={ecommerceImg}
+        alt="password-generator"
       />
-      <h2 className="text-white">Country search</h2>
-      <p className="text-white">Rest countries created with React</p>
+      <h2 className="text-white">Admin dashboard</h2>
+      <p className="text-white">Ecommerce admin dashboard</p>
       <div className="d-flex flex-wrap">
         <div className="link-project rounded-3">
           <a
-            href="https://github.com/Marin303/rest-countries-react"
+            href="https://github.com/Marin303/ecommerce"
             target="_blank"
             rel="noreferrer"
           >
@@ -22,16 +23,16 @@ const CountrySearch = () => {
         </div>
         <div className="link-project rounded-3">
           <a
-            href="https://rest-countries-marin.netlify.app/"
+            href="https://github.com/Marin303/ecommerce"
             target="_blank"
             rel="noreferrer"
           >
-            Project - deploy
+            Project - in progress
           </a>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default CountrySearch;
+export default Ecommerce

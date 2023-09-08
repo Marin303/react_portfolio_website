@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
-import LetterSpelling from "../Components/LetterSpelling";
-import OpenSideIcon from "../Icons/OpenSide";
-import ArrowDownIcon from "../Icons/ArrowDownIcon";
-import NavigationMenu from "../Shared/NavigationMenu";
-import ContactInfo from "../Shared/ContactInfo";
-import FloatingCircles from "../Components/FloatingCircles";
-import codeTypingImg from "../Images/Code-typing.gif";
+import LetterSpelling from "../../Components/LetterSpelling";
+import OpenSideIcon from "../../Icons/OpenSide";
+import ArrowDownIcon from "../../Icons/ArrowDown";
+import NavigationMenu from "../../Shared/NavigationMenu";
+import ContactInfo from "../../Shared/ContactInfo";
+import FloatingCircles from "../../Components/FloatingCircles";
+import codeTypingImg from "../../Images/Code-typing.gif";
 
 const FirstPage = () => {
   const btnContentRef = useRef(null);

@@ -1,19 +1,19 @@
 import React from "react";
-import wheaterImg from "../Images/wheater-desktop.png";
-const WeatherForecast = () => {
+import restCountriesImg from "../../Images/rest-countries.gif"
+const CountrySearch = () => {
   return (
     <section className="projects pb-5 w-300px">
       <img
         className="rounded-top-3 fixedSize"
-        src={wheaterImg}
-        alt="wheater-app"
+        src={restCountriesImg}
+        alt="rest-countries"
       />
-      <h2 className="text-white">Wheater forecast</h2>
-      <p className="text-white">Real-time weather forecast app</p>
+      <h2 className="text-white">Country search</h2>
+      <p className="text-white">Rest countries created with React</p>
       <div className="d-flex flex-wrap">
         <div className="link-project rounded-3">
           <a
-            href="https://github.com/Marin303/wheater_forecast_react"
+            href="https://github.com/Marin303/rest-countries-react"
             target="_blank"
             rel="noreferrer"
           >
@@ -22,7 +22,7 @@ const WeatherForecast = () => {
         </div>
         <div className="link-project rounded-3">
           <a
-            href="https://weather-app-marin.netlify.app/"
+            href="https://rest-countries-marin.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
@@ -34,4 +34,4 @@ const WeatherForecast = () => {
   );
 };
 
-export default WeatherForecast;
+export default CountrySearch;

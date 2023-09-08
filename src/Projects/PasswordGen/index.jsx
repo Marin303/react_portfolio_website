@@ -1,5 +1,5 @@
 import React from "react";
-import passGenImg from "../Images/password-generator.png";
+import passGenImg from "../../Images/password-generator.png";
 const PasswordGen = () => {
   return (
     <section className="projects pb-5 w-300px">

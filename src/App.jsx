@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FirstPage from "./Pages/FirstPage";
 import AboutMe from "./Pages/AboutMe";

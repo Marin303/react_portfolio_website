@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import ArrowUp from "../Icons/ArrowUp";
+import ArrowUp from "../../Icons/ArrowUp";
 
 const Footer = () => {
   const [checkSend, setCheckSend] = useState(false);
@@ -93,7 +93,7 @@ const Footer = () => {
       <div className="arrow-up-container">
         <a href="#home" aria-label="back to home">
           <div className="arrow-up-wrapper arrow">
-           <ArrowUp/>
+            <ArrowUp />
           </div>
         </a>
       </div>
