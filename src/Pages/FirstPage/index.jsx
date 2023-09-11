@@ -56,7 +56,8 @@ const FirstPage = () => {
       id="home"
     >
       <FloatingCircles />
-      <nav className="bg-dark bg-gradient position-fixed top-0 left-0 w-100 d-flex justify-content-center">
+      <nav className="d-flex justify-content-center">
+
         <button onClick={handleContentVisibility} aria-label="openSideBar">
           {isVisible ? (
             <i className="fa-solid fa-xmark fa-xl"></i>
