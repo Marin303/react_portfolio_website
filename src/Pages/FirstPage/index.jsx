@@ -1,3 +1,4 @@
+import "./firstPage.scss"
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import LetterSpelling from "../../Components/LetterSpelling";
 import OpenSideIcon from "../../Icons/OpenSide";
@@ -52,11 +53,11 @@ const FirstPage = () => {
 
   return (
     <div
-      className="wrapper d-flex flex-column justify-content-center m-0 position-relative overflow-hidden"
+      className="wrapper"
       id="home"
     >
-      <FloatingCircles />
-      <nav className="d-flex justify-content-center">
+      {/* <FloatingCircles /> */}
+      <nav className="">
 
         <button onClick={handleContentVisibility} aria-label="openSideBar">
           {isVisible ? (
@@ -70,8 +71,8 @@ const FirstPage = () => {
           <NavigationMenu ref={btnContentRef} isVisible={isVisible} />
         )}
       </nav>
-      <section className="repon d-flex justify-content-between flex-wrap mt-5">
-        <aside className="nameText text-white p-4">
+      <section className="">
+        <aside className="nameText">
           <h1>Marin Muktić</h1>
 
           <LetterSpelling trigger={trigger} />
@@ -79,11 +80,6 @@ const FirstPage = () => {
           <ContactInfo />
         </aside>
       </section>
-      <div className="arrow-animation position-absolute bottom-0 start-50 mb-5">
-        <a href="#about" aria-label="Read more about me">
-          <ArrowDownIcon />
-        </a>
-      </div>
     </div>
   );
 };
